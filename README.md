@@ -117,7 +117,9 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 If you know of a good inferior lisp setup for vi I'd like to hear about it!
 
-```
+### Example Session
+
+```clj
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
 
 ClojureScript:hlisp.env> (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
