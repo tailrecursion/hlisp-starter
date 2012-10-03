@@ -27,9 +27,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
     (m/def-values
       [mytabs questiontab question answertab answer]
-      (make-tabs "one"
-        (clone li) (clone div) "one"
-        (clone li) (clone div) "two"))
+      (make-tabs "one" li div "one" li div "two"))
 
     ;; Define a var to save a little typing.
 
@@ -41,9 +39,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
     (m/def-values
       [myradio showquestion showanswer]
-      (make-radio "one"
-        (clone a-void) "one"
-        (clone a-void) "two"))
+      (make-radio "one" a-void "one" a-void "two"))
 
     ;; Keep myradio and mytabs synced: when one changes state the other
     ;; does, too.
@@ -64,8 +60,6 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
     <questiontab>question</questiontab>
     <answertab>answer</answertab>
   </ul>
-
-  <!--This here is a comment.-->
 
   <div>
     <question id="foo">
