@@ -13,3 +13,5 @@ pom.xml
 .lein-failures
 .lein-plugins
 .lein-cljsbuild-repl/
+src/cljs/____*
+resources/public/main.js
