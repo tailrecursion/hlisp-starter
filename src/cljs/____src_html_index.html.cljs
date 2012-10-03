@@ -127,4 +127,4 @@
 (def $comment       hlisp.env/make-comment-node)
 (m/def-values [question-tab answer-tab question answer show-question show-answer] [li li div div (a {:href "#"}) (a {:href "#"})])
 (defn ^:export hlispinit []
-(hlisp.env/init [(ul {:class "control-tabs"} (question-tab {} ($text "question")) (answer-tab {} ($text "answer"))) (div {} (question {} (p {} (b {} ($text "Q.")) ($text " Why did the chicken cross the road? ") (show-answer {} ($text "A")))) (answer {} (p {} (b {} ($text "A.")) ($text " To get to the other side! ") (show-question {} ($text "Q")))))]))
+(hlisp.env/init [(ul {:class "control-tabs"} (question-tab {} ($text "question")) (answer-tab {} ($text "answer"))) (div {} (question {:id "foo"} (p {} (b {} ($text "Q.")) ($text " Why did the chicken cross the road? ") (show-answer {} ($text "A")))) (answer {:id "bar"} (p {} (b {} ($text "A.")) ($text " To get to the other side! ") (show-question {} ($text "Q")))))]))
