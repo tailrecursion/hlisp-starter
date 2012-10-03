@@ -25,7 +25,7 @@ Here is the example `index.html` file:
     ;; container element is shown and all other containers are hidden.
 
     (m/def-values
-      [mytabs question-tab question answer-tab answer]
+      [mytabs questiontab question answertab answer]
       (make-tabs "one"
         (clone li) (clone div) "one"
         (clone li) (clone div) "two"))
@@ -39,7 +39,7 @@ Here is the example `index.html` file:
     ;; when the first or second element is clicked on, respectively.
 
     (m/def-values
-      [myradio show-question show-answer]
+      [myradio showquestion showanswer]
       (make-radio "one"
         (clone a-void) "one"
         (clone a-void) "two"))
@@ -60,8 +60,8 @@ Here is the example `index.html` file:
 <body>
 
   <ul class="control-tabs">
-    <question-tab>question</question-tab>
-    <answer-tab>answer</answer-tab>
+    <questiontab>question</questiontab>
+    <answertab>answer</answertab>
   </ul>
 
   <!--This here is a comment.-->
@@ -69,12 +69,12 @@ Here is the example `index.html` file:
   <div>
     <question id="foo">
       <p>
-        <b>Q.</b> Why did the chicken cross the road? <show-answer>A</show-answer>
+        <b>Q.</b> Why did the chicken cross the road? <showanswer>A</showanswer>
       </p>
     </question>
     <answer id="bar">
       <p>
-        <b>A.</b> To get to the other side! <show-question>Q</show-question>
+        <b>A.</b> To get to the other side! <showquestion>Q</showquestion>
       </p>
     </answer>
   </div>
