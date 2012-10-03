@@ -1,6 +1,6 @@
 # Starter
 
-Here is the example `index.html` file:
+Here is the example `index.html` file (or look at the [demo](http://micha.github.com/hlisp-starter/)):
 
 ```html
 <!DOCTYPE html>
