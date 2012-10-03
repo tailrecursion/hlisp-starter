@@ -15,7 +15,6 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
     (ns holyshit
       (:use
-        [hlisp.env    :only [clone]]
         [flapjax.core :only [sync-e]]
         [mytest.ui    :only [make-radio make-tabs]])
       (:require-macros
@@ -27,9 +26,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
     (m/def-values
       [mytabs questiontab question answertab answer]
-      (make-tabs "one"
-        (clone li) (clone div) "one"
-        (clone li) (clone div) "two"))
+      (make-tabs "one" li div "one" li div "two"))
 
     ;; Define a var to save a little typing.
 
@@ -41,9 +38,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
     (m/def-values
       [myradio showquestion showanswer]
-      (make-radio "one"
-        (clone a-void) "one"
-        (clone a-void) "two"))
+      (make-radio "one" a-void "one" a-void "two"))
 
     ;; Keep myradio and mytabs synced: when one changes state the other
     ;; does, too.
@@ -65,15 +60,13 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
     <answertab>answer</answertab>
   </ul>
 
-  <!--This here is a comment.-->
-
   <div>
-    <question id="foo">
+    <question>
       <p>
         <b>Q.</b> Why did the chicken cross the road? <showanswer>A</showanswer>
       </p>
     </question>
-    <answer id="bar">
+    <answer>
       <p>
         <b>A.</b> To get to the other side! <showquestion>Q</showquestion>
       </p>
@@ -124,7 +117,7 @@ Hlisp defines vars for all the DOM elements in the following namespaces:
 * Project HTML page namespaces.
 * The `hlisp.env` namespace.
 
-```clj
+```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
 
 ClojureScript:hlisp.env> (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
