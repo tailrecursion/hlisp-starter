@@ -113,6 +113,10 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
 * Hlisp elements print both in the REPL and in the browser console.
 
+### Vi
+
+If you know of a good inferior lisp setup for vi I'd like to hear about it!
+
 ```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
 
