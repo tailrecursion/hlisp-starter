@@ -16,9 +16,17 @@ In another tab, you can start watcher-based ClojureScript compilation:
 
 Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
-## Project
+## Running a ClojureScript REPL
 
-This is the default `project.clj` file:
+### Emacs
+
+* `C-x d` to the `cljs-starter` directory
+* `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
+* `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
+
+## Configuration
+
+Have a look at the `project.clj` file:
 
 ```clj
 (defproject
@@ -46,10 +54,4 @@ This is the default `project.clj` file:
   )
 ```
 
-## Running a ClojureScript REPL
 
-### Emacs
-
-* `C-x d` to the `cljs-starter` directory
-* `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
-* `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
