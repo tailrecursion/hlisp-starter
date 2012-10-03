@@ -16,8 +16,8 @@
   :hlisp        {:html-src    "src/html"
                  :cljs-src    "src/cljs"
                  :html-out    "resources/public"
-                 :includes    ["src/jslib/jquery.js"]
+                 :includes    ["src/jslib/jquery.js"
+                               "src/jslib/flapjax.js"]
                  :cljsc-opts  {:optimizations  :whitespace
-                               :externs        ["src/extern/jquery.js"]}} 
-
-  )
+                               :externs        ["src/extern/jquery.js"
+                                                "src/extern/flapjax.js"]}})

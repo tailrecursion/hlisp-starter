@@ -6,15 +6,28 @@
   <script type="text/hlisp">
 
     (ns holyshit
-      (:require-macros [mytest.macros :as m]))
+      (:use
+        [hlisp.env    :only [clone]]
+        [flapjax.core :only [sync-e]]
+        [mytest.ui    :only [make-radio make-tabs]])
+      (:require-macros
+        [mytest.macros :as m]))
 
     (m/def-values
-      [question-tab     answer-tab
-       question         answer
-       show-question    show-answer]
-      [li               li
-       div              div
-       (a {:href "#"})  (a {:href "#"})])
+      [mytabs
+       question-tab     question
+       answer-tab       answer]
+      (make-tabs "one"
+        (clone li) (clone div) "one"
+        (clone li) (clone div) "two"))
+
+    (m/def-values
+      [myradio show-question show-answer]
+      (make-radio "one"
+        (clone (a {:href "javascript:void(0)"})) "one"
+        (clone (a {:href "javascript:void(0)"})) "two"))
+
+    (sync-e myradio mytabs)
 
   </script>
 
@@ -31,7 +44,7 @@
     <answer-tab>answer</answer-tab>
   </ul>
 
-  <!--here is a coment!-->
+  <!--here is a comment!-->
 
   <div>
     <question id="foo">
