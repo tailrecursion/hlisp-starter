@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>hlisp test</title>
+
+  <script type="text/hlisp">
+
+    (ns holyshit
+      (:require-macros [mytest.macros :as m]))
+
+    (m/def-values
+      [question-tab     answer-tab
+       question         answer
+       show-question    show-answer]
+      [li               li
+       div              div
+       (a {:href "#"})  (a {:href "#"})])
+
+  </script>
+
+  <style type="text/css">
+    ul.control-tabs { padding: 0; list-style-type: none; }
+    ul.control-tabs li { display: inline; padding-right: 5px; }
+    ul.control-tabs li.checked { color: red; }
+  </style>
+</head>
+<body>
+
+  <ul class="control-tabs">
+    <question-tab>question</question-tab>
+    <answer-tab>answer</answer-tab>
+  </ul>
+
+  <!--here is a coment!-->
+
+  <div>
+    <question>
+      <p>
+        <b>Q.</b> Why did the chicken cross the road? <show-answer>A</show-answer>
+      </p>
+    </question>
+    <answer>
+      <p>
+        <b>A.</b> To get to the other side! <show-question>Q</show-question>
+      </p>
+    </answer>
+  </div>
+
+  <!--__HLISP__-->
+
+</body>
+</html>
