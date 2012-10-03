@@ -18,11 +18,13 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 ## Project
 
+This is the default `project.clj` file:
+
 ```clj
 (defproject
-  lein-test     "0.1.0-SNAPSHOT"
-  :description  "FIXME: write description"
-  :url          "http://example.com/FIXME"
+  hlisp-starter "0.1.0-SNAPSHOT"
+  :description  "Example hlisp project."
+  :url          "https://github.com/micha/hlisp-starter"
   :license      {:name "Eclipse Public License"
                  :url "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src/clj"]
