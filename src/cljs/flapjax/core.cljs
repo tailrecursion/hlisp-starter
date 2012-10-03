@@ -12,6 +12,9 @@
 (defn id [elem]
   (peek (.-ids elem)))
 
+(defn id! [elem]
+  (if-not (seq (.-ids elem)) (clone elem) elem))
+
 (defn filter-id [id]
   (fn [v]
     (< 0 (-> (jq/$ (.-target v))
