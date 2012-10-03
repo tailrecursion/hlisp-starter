@@ -62,12 +62,12 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
   </ul>
 
   <div>
-    <question id="foo">
+    <question>
       <p>
         <b>Q.</b> Why did the chicken cross the road? <showanswer>A</showanswer>
       </p>
     </question>
-    <answer id="bar">
+    <answer>
       <p>
         <b>A.</b> To get to the other side! <showquestion>Q</showquestion>
       </p>
