@@ -23,6 +23,7 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * `C-x d` to the `cljs-starter` directory
 * `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
+* Hlisp elements print both in the REPL and in the browser console.
 
 ```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
