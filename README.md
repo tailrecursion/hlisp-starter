@@ -4,6 +4,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
 ```html
 <!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8" />
   <title>hlisp test</title>
