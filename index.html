@@ -21,12 +21,8 @@
     ;; container element is shown and all other containers are hidden.
 
     (m/def-values
-      [mytabs
-       question-tab question
-       answer-tab   answer]
-      (make-tabs "one"
-        li div "one"
-        li div "two"))
+      [mytabs question-tab question answer-tab answer]
+      (make-tabs "one" li div "one" li div "two"))
 
     ;; Define a var to save a little typing.
 
@@ -37,12 +33,8 @@
     ;; when the first or second element is clicked on, respectively.
 
     (m/def-values
-      [myradio
-       show-question
-       show-answer]
-      (make-radio "one"
-        a-void "one"
-        a-void "two"))
+      [myradio show-question show-answer]
+      (make-radio "one" a-void "one" a-void "two"))
 
     ;; Keep myradio and mytabs synced: when one changes state the other
     ;; does, too.
