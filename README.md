@@ -29,8 +29,10 @@ ClojureScript:cljs.user> (in-ns 'hlisp.env)
 
 ClojureScript:hlisp.env> (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
 (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
+
 ClojureScript:hlisp.env> (defn f [x] (div {:class "foo"} x))
 #<function f(x){ ... }>
+
 ClojureScript:hlisp.env> (f (p ($text "I am wrapped in a div?")))
 (div {:class "foo"} (p ($text "I am wrapped in a div?")))
 ```
