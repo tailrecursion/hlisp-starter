@@ -1,2 +1,2 @@
 #!/bin/bash
-lein ring server-headless 4000
+lein trampoline ring server-headless 4000
