@@ -15,7 +15,6 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 
     (ns holyshit
       (:use
-        [hlisp.env    :only [clone]]
         [flapjax.core :only [sync-e]]
         [mytest.ui    :only [make-radio make-tabs]])
       (:require-macros
