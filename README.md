@@ -115,7 +115,7 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 ### Vi
 
-If you know of a good inferior lisp setup for vi I'd like to hear about it!
+* If you know of a good inferior lisp setup for vi I'd like to hear about it!
 
 ### Example Session
 
