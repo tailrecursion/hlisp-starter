@@ -119,10 +119,10 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 ### Example Session
 
-Since you can't refer to namespaces in ClojureScript with `:use` without
+* Since you can't refer to namespaces in ClojureScript with `:use` without
 specifying each name individually in the `:only` clause, hlisp defines
-vars for all the DOM elements in your page namespaces. The `hlisp.env`
-namespace has bindings for them, as well.
+vars for all the DOM elements in your page namespaces.
+* The `hlisp.env` namespace has bindings for them, as well.
 
 ```clj
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
