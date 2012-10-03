@@ -4,7 +4,10 @@
   (:require [jayq.core :as jq]
             [jayq.util :as ju]))
 
-(def *clicksE* (js/clicksE (.-body js/document)))
+(def body (.-body js/document))
+
+(def *clicks*   (js/$E body "click"))
+(def *changes*  (js/$E body "change"))
 
 (defn id [elem]
   (peek (.-ids elem)))
@@ -82,7 +85,10 @@
   (js/filterE src pred))
 
 (defn clicks-e [elem]
-  (js/filterE *clicksE* (filter-id (id elem))))
+  (js/filterE *clicks* (filter-id (id elem))))
+
+(defn changes-e [elem]
+  (js/filterE *changes* (filter-id (id elem))))
 
 (defn map-e [f a]
   (js/mapE f a))

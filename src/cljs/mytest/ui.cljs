@@ -7,19 +7,16 @@
 (defn add-radio [radio elem v]
   (map-e (fn [_] (send-e radio v)) (clicks-e elem))
   (map-e
-    (fn [_]
-      (-> elem
-        (dom-remove-attr! "data-checked") 
-        (dom-css! "cursor" "pointer") 
-        (dom-remove-class! "checked"))) 
-    (filter-e #(not= % v) radio))
-  (map-e
-    (fn [_]
-      (-> elem
-        (dom-attr! "data-checked" "data-checked")
-        (dom-css! "cursor" "default")
-        (dom-add-class! "checked")))
-    (filter-e #(= % v) radio))
+    #(if (not= % v)
+       (-> elem
+         (dom-remove-attr! "data-checked") 
+         (dom-css! "cursor" "pointer") 
+         (dom-remove-class! "checked")) 
+       (-> elem
+         (dom-attr! "data-checked" "data-checked")
+         (dom-css! "cursor" "default")
+         (dom-add-class! "checked")))
+    radio)
   elem)
 
 (defn make-radio [init & args]

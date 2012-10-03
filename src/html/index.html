@@ -5,6 +5,8 @@
 
   <script type="text/hlisp">
 
+    ;; Namespace declaration. Each page must have a unique namespace.
+
     (ns holyshit
       (:use
         [hlisp.env    :only [clone]]
@@ -13,19 +15,32 @@
       (:require-macros
         [mytest.macros :as m]))
 
+    ;; Create a "tabs" set with two trigger elements and two container
+    ;; elements. When the trigger element is clicked the associated
+    ;; container element is shown and all other containers are hidden.
+
     (m/def-values
-      [mytabs
-       question-tab     question
-       answer-tab       answer]
+      [mytabs question-tab question answer-tab answer]
       (make-tabs "one"
         (clone li) (clone div) "one"
         (clone li) (clone div) "two"))
 
+    ;; Define a var to save a little typing.
+
+    (def a-void (a {:href "javascript:void (0)"}))
+
+    ;; Create a "radio button" set with two elements (anchors, in this
+    ;; case). The myradio event stream carries values of "one" and "two"
+    ;; when the first or second element is clicked on, respectively.
+
     (m/def-values
       [myradio show-question show-answer]
       (make-radio "one"
-        (clone (a {:href "javascript:void(0)"})) "one"
-        (clone (a {:href "javascript:void(0)"})) "two"))
+        (clone a-void) "one"
+        (clone a-void) "two"))
+
+    ;; Keep myradio and mytabs synced: when one changes state the other
+    ;; does, too.
 
     (sync-e myradio mytabs)
 
@@ -44,7 +59,7 @@
     <answer-tab>answer</answer-tab>
   </ul>
 
-  <!--here is a comment!-->
+  <!--This here is a comment.-->
 
   <div>
     <question id="foo">
