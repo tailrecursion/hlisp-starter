@@ -118,7 +118,7 @@ Hlisp defines vars for all the DOM elements in the following namespaces:
 * Project HTML page namespaces.
 * The `hlisp.env` namespace.
 
-```clj
+```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
 
 ClojureScript:hlisp.env> (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
