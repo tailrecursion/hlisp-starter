@@ -1,9 +1,10 @@
 # Starter
 
-Here is the example `index.html` file:
+Here is the example `index.html` file (or look at the [demo](http://micha.github.com/hlisp-starter/)):
 
 ```html
 <!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8" />
   <title>hlisp test</title>
@@ -112,7 +113,18 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
 * Hlisp elements print both in the REPL and in the browser console.
 
-```
+### Vi
+
+* If you know of a good inferior lisp setup for vi I'd like to hear about it!
+
+### Example Session
+
+Hlisp defines vars for all the DOM elements in the following namespaces:
+
+* Project HTML page namespaces.
+* The `hlisp.env` namespace.
+
+```clj
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
 
 ClojureScript:hlisp.env> (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))

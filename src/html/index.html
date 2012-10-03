@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8" />
   <title>hlisp test</title>
@@ -20,10 +21,12 @@
     ;; container element is shown and all other containers are hidden.
 
     (m/def-values
-      [mytabs question-tab question answer-tab answer]
+      [mytabs
+       question-tab question
+       answer-tab   answer]
       (make-tabs "one"
-        (clone li) (clone div) "one"
-        (clone li) (clone div) "two"))
+        li div "one"
+        li div "two"))
 
     ;; Define a var to save a little typing.
 
@@ -34,10 +37,12 @@
     ;; when the first or second element is clicked on, respectively.
 
     (m/def-values
-      [myradio show-question show-answer]
+      [myradio
+       show-question
+       show-answer]
       (make-radio "one"
-        (clone a-void) "one"
-        (clone a-void) "two"))
+        a-void "one"
+        a-void "two"))
 
     ;; Keep myradio and mytabs synced: when one changes state the other
     ;; does, too.
