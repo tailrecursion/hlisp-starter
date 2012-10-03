@@ -24,6 +24,17 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
 
+```
+ClojureScript:cljs.user> (in-ns 'hlisp.env)
+
+ClojureScript:hlisp.env> (div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
+(div {:id "main"} (h1 ($text "Hello, world!")) (p ($text "How do you do?")))
+ClojureScript:hlisp.env> (defn f [x] (div {:class "foo"} x))
+#<function f(x){ ... }>
+ClojureScript:hlisp.env> (f (p ($text "I am wrapped in a div?")))
+(div {:class "foo"} (p ($text "I am wrapped in a div?")))
+```
+
 ## Configuration
 
 Have a look at the `project.clj` file:
