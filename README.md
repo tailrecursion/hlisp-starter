@@ -12,6 +12,9 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
   <script type="text/hlisp">
 
     ;; Namespace declaration. Each page must have a unique namespace.
+    ;; The ns macro is also pulling in functions defined in other name-
+    ;; spaces, like the make-radio and make-tabs functions defined in
+    ;; the mytest.ui namespace (src/cljs/mytest/ui.cljs).
 
     (ns holyshit
       (:use
