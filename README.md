@@ -128,6 +128,12 @@ ClojureScript:hlisp.env> (defn f [x] (div {:class "foo"} x))
 
 ClojureScript:hlisp.env> (f (p ($text "I am wrapped in a div?")))
 (div {:class "foo"} (p ($text "I am wrapped in a div?")))
+
+ClojureScript:hlisp.env> (def test1 (f (label ($text "Name:"))))
+(div {:class "foo"} (label ($text "Name:")))
+
+ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
+(div {:class "foo"} (label ($text "Name:")) br (input {:type "text"}))
 ```
 
 ## Configuration
