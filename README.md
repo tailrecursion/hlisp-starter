@@ -12,6 +12,9 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
   <script type="text/hlisp">
 
     ;; Namespace declaration. Each page must have a unique namespace.
+    ;; The ns macro is also pulling in functions defined in other name-
+    ;; spaces, like the make-radio and make-tabs functions defined in
+    ;; the mytest.ui namespace (src/cljs/mytest/ui.cljs).
 
     (ns holyshit
       (:use
@@ -128,6 +131,12 @@ ClojureScript:hlisp.env> (defn f [x] (div {:class "foo"} x))
 
 ClojureScript:hlisp.env> (f (p ($text "I am wrapped in a div?")))
 (div {:class "foo"} (p ($text "I am wrapped in a div?")))
+
+ClojureScript:hlisp.env> (def test1 (f (label ($text "Name:"))))
+(div {:class "foo"} (label ($text "Name:")))
+
+ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
+(div {:class "foo"} (label ($text "Name:")) br (input {:type "text"}))
 ```
 
 ## Configuration
