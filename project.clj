@@ -15,8 +15,8 @@
   :cljsbuild    {:builds []}
   :hlisp        {:html-src    "src/html"
                  :cljs-src    "src/cljs"
-                 :html-out    "resources/public"
-                 :base-dir    ""
+                 :html-out    "."
+                 :base-dir    "/hlisp-starter"
                  :includes    ["src/jslib/jquery.js"
                                "src/jslib/flapjax.js"]
                  :cljsc-opts  {:optimizations  :whitespace
