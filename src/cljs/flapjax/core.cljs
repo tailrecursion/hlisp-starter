@@ -1,13 +1,19 @@
 (ns flapjax.core
   (:use
-    [hlisp.env :only [clone add-initfn!]])
+    [hlisp.env :only [clone]])
   (:require [jayq.core :as jq]
             [jayq.util :as ju]))
 
-(def body (.-body js/document))
+(defn core-event [ev]
+  (let [r (js/receiverE)]
+    (-> (jq/$ "body")
+      (.on "click" (fn [v] (.sendEvent r v))))
+    r))
 
-(def *clicks*   (js/$E body "click"))
-(def *changes*  (js/$E body "change"))
+(def *clicks*   (core-event "click"))
+(def *changes*  (core-event "change"))
+
+(def add-initfn! jq/$)
 
 (defn id [elem]
   (peek (.-ids elem)))
