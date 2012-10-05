@@ -14,3 +14,4 @@ pom.xml
 .lein-plugins
 .lein-cljsbuild-repl/
 src/cljs/____*
+resources/public/main.js
