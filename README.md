@@ -151,7 +151,7 @@ namespace contains the functions and types used.
 
 #### Functions
 
-* __tag__ (tag node) Returns the node's tag as a string.
+* __tag__ <br> (tag node) Returns the node's tag as a string.
 
 ## Configuration
 
