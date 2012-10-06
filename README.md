@@ -144,7 +144,9 @@ ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
 The [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
 namespace contains the functions and types used.
 
-### DOM Elements: div, span, p, etc.
+### DOM Elements
+
+div, span, p, etc.
 
 ```
 All HTML tags are defined in the hlisp.env namespace and also in any HTML page
