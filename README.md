@@ -105,8 +105,12 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 ### Emacs
 
 * `C-x d` to the `cljs-starter` directory
-* `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
-* `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
+* `M-x set-variable`, and set the variable `inferior-lisp-program` to
+  `script/cljsrepl`
+* `M-x run-lisp` and you should see an inferior-lisp buffer running a
+  ClojureScript REPL.
+* Visit or reload [http://localhost:4000/](http://localhost:4000/). The
+  browser should then connect to the REPL.
 
 ### Vi
 
