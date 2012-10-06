@@ -189,7 +189,7 @@ Returns DOM element for `node` (and children).
 
 (node-zip node)
 
-Returns a [zipper](http://clojuredocs.org/clojure_core/clojure.zip/zipper)
+Returns a [clojure.zip/zipper](http://clojuredocs.org/clojure_core/clojure.zip/zipper)
 structure for `node`.
 
 ## Configuration
