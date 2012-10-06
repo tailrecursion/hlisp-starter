@@ -155,11 +155,42 @@ namespace contains the functions and types used.
 
 Returns the node name (i.e. the HTML tag) of `node`.
 
-#### <tt> attrs </tt>
+#### attrs
 
 (attrs node)
 
 Returns the attribute map of `node`.
+
+#### branch?
+
+(branch? node)
+
+Returns true if `node` can have children.
+
+#### children
+
+(children node)
+
+Returns a seq of child nodes of `node`.
+
+#### make-node
+
+(make-node node children)
+
+Given a node `node` and a seq of children `children`, make a new node.
+
+#### dom
+
+(dom node)
+
+Returns DOM element for `node` (and children).
+
+#### node-zip
+
+(node-zip node)
+
+Returns a [zipper](http://clojuredocs.org/clojure_core/clojure.zip/zipper)
+structure for `node`.
 
 ## Configuration
 
