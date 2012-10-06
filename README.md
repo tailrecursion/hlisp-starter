@@ -149,7 +149,7 @@ namespace contains the functions and types used.
 * `div`, `span`, `p`, etc.
 * All satisfy the `IDomNode` protocol.
 
-#### make-elem-node
+### make-elem-node
 
 (make-elem-node tag) <br>
 (make-elem-node tag attrs) <br>
