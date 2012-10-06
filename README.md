@@ -149,9 +149,9 @@ namespace contains the functions and types used.
 * `div`, `span`, `p`, etc.
 * All satisfy the `IDomNode` protocol.
 
-#### Functions
-
-* __tag__ <br> (tag node) <br> Returns the DOM `nodeName` property of `node`.
+#### tag
+(tag node)
+Returns the DOM `nodeName` property of `node`.
 
 ## Configuration
 
