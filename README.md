@@ -153,13 +153,13 @@ namespace contains the functions and types used.
 
 (tag node)
 
-Returns the DOM `nodeName` property of `node`.
+Returns the node name (i.e. the HTML tag) of `node`.
 
-#### tag
+#### attrs
 
-(tag node)
+(attrs node)
 
-Returns the DOM `nodeName` property of `node`.
+Returns the attribute map of `node`.
 
 ## Configuration
 
