@@ -155,7 +155,7 @@ namespace contains the functions and types used.
 
 Returns the node name (i.e. the HTML tag) of `node`.
 
-#### attrs
+#### <tt> attrs </tt>
 
 (attrs node)
 
