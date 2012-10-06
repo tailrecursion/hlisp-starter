@@ -276,6 +276,7 @@ Have a look at the `project.clj` file:
   :hlisp        {:html-src    "src/html"
                  :cljs-src    "src/cljs"
                  :html-out    "resources/public"
+                 :base-dir    "/"
                  :includes    ["src/jslib/jquery.js"]
                  :cljsc-opts  {:optimizations  :whitespace
                                :externs        ["src/extern/jquery.js"]}} 
