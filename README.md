@@ -109,8 +109,8 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
   `script/cljsrepl`
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a
   ClojureScript REPL.
-* Visit or reload [http://localhost:4000/](http://localhost:4000/). The
-  browser should then connect to the REPL.
+* Visit or reload [http://localhost:4000/](http://localhost:4000/) in
+  the browser to connect the REPL to the browser.
 
 ### Vi
 
