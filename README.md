@@ -144,10 +144,12 @@ ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
 The [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
 namespace contains the functions and types used.
 
-#### DOM Elements
+### DOM Elements: div, span, p, etc.
 
-* `div`, `span`, `p`, etc.
-* All satisfy the `IDomNode` protocol.
+```
+All HTML tags are defined in the hlisp.env namespace and also in any HTML page
+namespace.
+```
 
 ### make-elem-node
 
@@ -160,17 +162,21 @@ namespace contains the functions and types used.
 Returns a new element node with the given initial state.
 ```
 
-#### make-text-node
+### make-text-node
 
 (make-text-node text)
 
+```
 Creates a new text node with given `text`.
+```
 
-#### make-comment-node
+### make-comment-node
 
 (make-comment-node text)
 
+```
 Creates a new comment node with given `text`.
+```
 
 #### tag
 
