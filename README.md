@@ -279,9 +279,7 @@ Have a look at the `project.clj` file:
                  :base-dir    "/"
                  :includes    ["src/jslib/jquery.js"]
                  :cljsc-opts  {:optimizations  :whitespace
-                               :externs        ["src/extern/jquery.js"]}} 
-
-  )
+                               :externs        ["src/extern/jquery.js"]}})
 ```
 
 
