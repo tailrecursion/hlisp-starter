@@ -117,8 +117,8 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * Hlisp defines vars for all the DOM elements in the following namespaces:
   * Project HTML page namespaces.
   * The `hlisp.env` namespace.
-* DOM elements in the REPL are printed in the browser JavaScript console, as
-  well as in the REPL itself.
+* DOM elements in the REPL are printed in the browser JavaScript console as DOM
+  elements, as well as in the REPL itself as lists.
 
 ```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
