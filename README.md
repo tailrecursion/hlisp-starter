@@ -160,6 +160,8 @@ All HTML tags are defined in the hlisp.env namespace and also in any HTML page
 namespace.
 ```
 
+#### Example
+
 ```clj
 user> (in-ns 'hlisp.env)
 
