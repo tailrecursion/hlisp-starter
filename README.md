@@ -160,7 +160,7 @@ All HTML tags are defined in the hlisp.env namespace and also in any HTML page
 namespace.
 ```
 
-#### Example
+##### Example
 
 ```clj
 user> (in-ns 'hlisp.env)
@@ -180,6 +180,14 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 
 ```
 Creates a text node with the given text.
+```
+
+##### Example
+
+```clj
+;; Produces <p>Hello, world!</p> in the browser.
+hlisp.env> (p ($text "Hello, world!"))
+(p ($text "Hello, world!"))
 ```
 
 ### Comment Nodes
