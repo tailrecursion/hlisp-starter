@@ -146,12 +146,12 @@ ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
 (div {:class "foo"} (label ($text "Name:")) br (input {:type "text"}))
 ```
 
-# API
+## API
 
 The [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
 namespace contains the functions and types used.
 
-## Element Nodes
+### Element Nodes
 
 div, span, p, etc.
 
@@ -174,7 +174,9 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 ```
 
-## Text Nodes
+<hr>
+
+### Text Nodes
 
 ($text text)
 
@@ -182,7 +184,9 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 Creates a text node with the given text.
 ```
 
-## Comment Nodes
+<hr>
+
+### Comment Nodes
 
 ($comment text)
 
@@ -190,7 +194,9 @@ Creates a text node with the given text.
 Creates a comment node with the given text.
 ```
 
-## tag
+<hr>
+
+### tag
 
 (tag node)
 
@@ -198,13 +204,17 @@ Creates a comment node with the given text.
 Returns the node name (i.e. the HTML tag) of node.
 ```
 
-## attrs
+<hr>
+
+### attrs
 
 (attrs node)
 
 ```
 Returns the attribute map of node.
 ```
+
+<hr>
 
 ### branch?
 
