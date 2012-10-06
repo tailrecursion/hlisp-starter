@@ -174,8 +174,6 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 ```
 
-<hr>
-
 ### Text Nodes
 
 ($text text)
@@ -183,8 +181,6 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 ```
 Creates a text node with the given text.
 ```
-
-<hr>
 
 ### Comment Nodes
 
@@ -194,8 +190,6 @@ Creates a text node with the given text.
 Creates a comment node with the given text.
 ```
 
-<hr>
-
 ### tag
 
 (tag node)
@@ -204,8 +198,6 @@ Creates a comment node with the given text.
 Returns the node name (i.e. the HTML tag) of node.
 ```
 
-<hr>
-
 ### attrs
 
 (attrs node)
@@ -213,8 +205,6 @@ Returns the node name (i.e. the HTML tag) of node.
 ```
 Returns the attribute map of node.
 ```
-
-<hr>
 
 ### branch?
 
