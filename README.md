@@ -151,7 +151,7 @@ namespace contains the functions and types used.
 
 #### Functions
 
-* __foo__
+* __tag__ `(tag foo bar)`
 
 ## Configuration
 
