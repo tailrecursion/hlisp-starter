@@ -232,7 +232,7 @@ Returns DOM element for node (and children).
 Returns a clojure.zip/zipper structure for node.
 ```
 
-### Protocols
+## Protocols
 
 Hlisp element nodes implement the following protocols:
 
