@@ -190,7 +190,7 @@ Creates a text node with the given text.
 Creates a comment node with the given text.
 ```
 
-### tag
+## tag
 
 (tag node)
 
@@ -198,7 +198,7 @@ Creates a comment node with the given text.
 Returns the node name (i.e. the HTML tag) of node.
 ```
 
-### attrs
+## attrs
 
 (attrs node)
 
