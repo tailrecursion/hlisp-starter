@@ -107,7 +107,6 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * `C-x d` to the `cljs-starter` directory
 * `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
-* Hlisp elements print both in the REPL and in the browser console.
 
 ### Vi
 
@@ -119,7 +118,7 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
   * Project HTML page namespaces.
   * The `hlisp.env` namespace.
 * DOM elements in the REPL are printed in the browser JavaScript console, as
-  well.
+  well as in the REPL itself.
 
 ```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
@@ -139,6 +138,20 @@ ClojureScript:hlisp.env> (def test1 (f (label ($text "Name:"))))
 ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
 (div {:class "foo"} (label ($text "Name:")) br (input {:type "text"}))
 ```
+
+## API
+
+The [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
+namespace contains the functions and types used.
+
+#### DOM Elements
+
+* `div`, `span`, `p`, etc.
+* All satisfy the `IDomNode` protocol.
+
+#### Functions
+
+* __foo__
 
 ## Configuration
 
