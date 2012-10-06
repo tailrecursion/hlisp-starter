@@ -146,10 +146,10 @@ namespace contains the functions and types used.
 
 ### DOM Elements: div, span, p, etc.
 
-<code>
+```
 All HTML tags are defined in the hlisp.env namespace and also in any HTML page
 namespace.
-</code>
+```
 
 ### make-elem-node
 
