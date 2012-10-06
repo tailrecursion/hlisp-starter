@@ -169,7 +169,7 @@ Returns a new element node with the given initial state.
 (make-text-node text)
 
 ```
-Creates a new text node with given `text`.
+Creates a new text node with given text.
 ```
 
 ### make-comment-node
@@ -177,51 +177,64 @@ Creates a new text node with given `text`.
 (make-comment-node text)
 
 ```
-Creates a new comment node with given `text`.
+Creates a new comment node with given text.
 ```
 
-#### tag
+### tag
 
 (tag node)
 
-Returns the node name (i.e. the HTML tag) of `node`.
+```
+Returns the node name (i.e. the HTML tag) of node.
+```
 
-#### attrs
+### attrs
 
 (attrs node)
 
-Returns the attribute map of `node`.
+```
+Returns the attribute map of node.
+```
 
-#### branch?
+### branch?
 
 (branch? node)
 
-Returns true if `node` can have children.
+```
+Returns true if node can have children.
+```
 
-#### children
+### children
 
 (children node)
 
-Returns a seq of child nodes of `node`.
+```
+Returns a seq of child nodes of node.
+```
 
-#### make-node
+### make-node
 
 (make-node node children)
 
-Given a node `node` and a seq of children `children`, make a new node.
+```
+Given a node node and a seq of children children, make a new node.
+```
 
-#### dom
+### dom
 
 (dom node)
 
-Returns DOM element for `node` (and children).
+```
+Returns DOM element for node (and children).
+```
 
-#### node-zip
+### node-zip
 
 (node-zip node)
 
-Returns a [clojure.zip/zipper](http://clojuredocs.org/clojure_core/clojure.zip/zipper)
-structure for `node`.
+```
+Returns a clojure.zip/zipper structure for node.
+```
 
 ## Configuration
 
