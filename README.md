@@ -150,7 +150,15 @@ namespace contains the functions and types used.
 * All satisfy the `IDomNode` protocol.
 
 #### tag
+
 (tag node)
+
+Returns the DOM `nodeName` property of `node`.
+
+#### tag
+
+(tag node)
+
 Returns the DOM `nodeName` property of `node`.
 
 ## Configuration
