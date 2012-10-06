@@ -146,12 +146,12 @@ ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
 (div {:class "foo"} (label ($text "Name:")) br (input {:type "text"}))
 ```
 
-## API
+# API
 
 The [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
 namespace contains the functions and types used.
 
-### Element Nodes
+## Element Nodes
 
 div, span, p, etc.
 
@@ -160,7 +160,7 @@ All HTML tags are defined in the hlisp.env namespace and also in any HTML page
 namespace.
 ```
 
-##### Example
+#### Example
 
 ```clj
 user> (in-ns 'hlisp.env)
@@ -174,7 +174,7 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 ```
 
-### Text Nodes
+## Text Nodes
 
 ($text text)
 
@@ -182,7 +182,7 @@ hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
 Creates a text node with the given text.
 ```
 
-### Comment Nodes
+## Comment Nodes
 
 ($comment text)
 
