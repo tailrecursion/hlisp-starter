@@ -161,6 +161,8 @@ namespace.
 ```
 
 ```clj
+user> (in-ns 'hlisp.env)
+
 ;; Produces <p></p> in the browser console.
 hlisp.env> p
 p
