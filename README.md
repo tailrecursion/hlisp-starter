@@ -160,6 +160,16 @@ All HTML tags are defined in the hlisp.env namespace and also in any HTML page
 namespace.
 ```
 
+```clj
+;; Produces <p></p> in the browser console.
+hlisp.env> p
+p
+
+;; Produces <div id="main"><h1>My Page</h1><p>Content.</p></div> in the console.
+hlisp.env> (div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
+(div {:id "main"} (h1 ($text "My Page")) (p ($text "Content.")))
+```
+
 ### Text Nodes
 
 ($text text)
