@@ -151,27 +151,6 @@ ClojureScript:hlisp.env> (test1 br (input {:type "text"}))
 The [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
 namespace contains the functions and types used.
 
-### Protocols
-
-Hlisp element nodes implement the following protocols:
-
-* IDomNode
-* Object
-* IPrintable
-* IFn
-* IStack
-* ICounted
-* IEmptyableCollection
-* ICollection
-* IIndexed
-* ISeq
-* INext
-* ILookup
-* IAssociative
-* IMap
-* ISeqable
-* IReversable
-
 ### Element Nodes
 
 div, span, p, etc.
@@ -252,6 +231,27 @@ Returns DOM element for node (and children).
 ```
 Returns a clojure.zip/zipper structure for node.
 ```
+
+### Protocols
+
+Hlisp element nodes implement the following protocols:
+
+* IDomNode
+* Object
+* IPrintable
+* IFn
+* IStack
+* ICounted
+* IEmptyableCollection
+* ICollection
+* IIndexed
+* ISeq
+* INext
+* ILookup
+* IAssociative
+* IMap
+* ISeqable
+* IReversable
 
 ## Configuration
 
