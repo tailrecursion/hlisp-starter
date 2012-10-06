@@ -102,6 +102,9 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 ## Running a ClojureScript REPL
 
+The ClojureScript REPL compiles ClojureScript forms into JavaScript locally
+and sends them to the browser to be evaluated.
+
 ### Emacs
 
 * `C-x d` to the `cljs-starter` directory
@@ -110,7 +113,7 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a
   ClojureScript REPL.
 * Visit or reload [http://localhost:4000/](http://localhost:4000/) in
-  the browser to connect the REPL to the browser.
+  the browser.
 
 ### Vi
 
