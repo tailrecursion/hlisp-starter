@@ -149,6 +149,29 @@ namespace contains the functions and types used.
 * `div`, `span`, `p`, etc.
 * All satisfy the `IDomNode` protocol.
 
+#### make-elem-node
+
+(make-elem-node tag) <br>
+(make-elem-node tag attrs) <br>
+(make-elem-node tag attrs children) <br>
+(make-elem-node tag attrs children ids)
+
+```
+Returns a new element node with the given initial state.
+```
+
+#### make-text-node
+
+(make-text-node text)
+
+Creates a new text node with given `text`.
+
+#### make-comment-node
+
+(make-comment-node text)
+
+Creates a new comment node with given `text`.
+
 #### tag
 
 (tag node)
