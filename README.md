@@ -159,7 +159,7 @@ must operate.
   are not included here as they can only exist as children, and have a peculiar
   relationship to the overall tree-like interface provided by the DOM.
 * **Means of composition:** DOM elements can be composed only one way: an
-  element can be appended to another element as a child.
+  element can be appended to another element.
 * **Means of abstraction:** There is no mechanism for giving a name to an HTML
   structure, other than attaching a global identifier to it. This may
   take the form of setting the `id` attribute, or it may involve complex,
