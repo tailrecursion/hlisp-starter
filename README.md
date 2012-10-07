@@ -20,14 +20,14 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
       (:use
         [flapjax.core :only [sync-e]]
         [mytest.ui    :only [make-radio make-tabs]])
-      (:require-macros
-        [mytest.macros :as m]))
+      (:use-macros
+        [mytest.macros :only [def-values]]))
 
     ;; Create a "tabs" set with two trigger elements and two container
     ;; elements. When the trigger element is clicked the associated
     ;; container element is shown and all other containers are hidden.
 
-    (m/def-values
+    (def-values
       [mytabs questiontab question answertab answer]
       (make-tabs "one" li div "one" li div "two"))
 
@@ -39,7 +39,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
     ;; case). The myradio event stream carries values of "one" and "two"
     ;; when the first or second element is clicked on, respectively.
 
-    (m/def-values
+    (def-values
       [myradio showquestion showanswer]
       (make-radio "one" a-void "one" a-void "two"))
 
