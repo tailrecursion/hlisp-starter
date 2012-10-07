@@ -143,6 +143,24 @@ encompassing the event stream itself only exacerbates the problems inherent in
 the callback system, and prevents more functional composition of the event
 streams (a prerequisite for minimization of shared state).
 
+### Modular Structure
+
+Given the number of tightly coupled domains in which the programmer must
+operate, the design of a flexible, modular, structured program poses
+exceedingly difficult problems. The fundamentally incompatible means of
+abstraction and composition impose crippling limitations during the design
+phase, and serve to magnify the effects of early design mistakes or slight
+changes to the project specifications.
+
+### General Purpose Library and API Design
+
+The above limitations naturally result in a system that lacks useful, general
+purpose libraries. There are a number of libraries that standardize browser
+APIs, of course, but there are very few that can provide anything more than
+that and preserve generality. An example of this is jQuery UI, which provides
+rich functionality but very little in the way of general, composeable
+abstractions.
+
 ## Goals
 
 So which properties should the proposed solution have?
