@@ -115,7 +115,33 @@ Why does this happen? The rest of this section lists some possible causes.
 
 ### Primitives, Abstraction, and Composition
 
+Front-end programs generally involve a number of disparate domains: there is
+the HTML markup itself, CSS rules, JavaScript programs and libraries,
+templating tools, and preprocessors. Sometimes the HTML markup itself is
+"rendered" on the server by a program written in another language. There is no
+unified environment with common primitives, means of abstraction, and means of
+composition.
 
+This presents the programmer with an extremely difficult design problem when
+he is developing the architecture of his program. The slightest misstep when
+designing the underlying architecture might have ramifications in other
+domains, and the fix could pose issues with interoperability betweeen the
+domains. This causes the program to become rigid and brittle. Changes tend
+to have exponentially expanding consequences at a certain level of complexity.
+
+### Shared State &amp; Side-Effects
+
+Dynamic behaviors in JavaScript generally use callbacks to manipulate mutable
+DOM elements. These callbacks are, necessarily, of void type (aside from
+certain cases where boolean false is returned to produce a side-effect),
+and the stream of events that will trigger the callbacks are not first-class
+entities in their own right.
+
+Since callbacks are of void type they can't be composed and must perform their
+job by imperatively mutating shared state. The lack of an abstraction
+encompassing the event stream itself only exacerbates the problems inherent in
+the callback system, and prevents more functional composition of the event
+streams (a prerequisite for minimization of shared state).
 
 # Development
 
