@@ -147,24 +147,24 @@ streams (a prerequisite for minimization of shared state).
 
 So which properties should the proposed solution have?
 
-####Don't throw away the HTML markup.
+* #####Don't throw away the HTML markup.
 
-Designers and creative types can't be
-expected to be highly-skilled, talented programmers. Discarding HTML in
-favor of a programming language will necessarily introduce another interface
-with all of the accompanying complexity. Instead, the solution should ideally
-be one which exposes powerful abstractions to the designer in a way that they
-can reasonably be expected to understand and use to their advantage.
+  Designers and creative types can't be expected to be highly-skilled,
+  talented programmers. Discarding HTML in favor of a programming language
+  will necessarily introduce another interface with all of the accompanying
+  complexity. Instead, the solution should ideally be one which exposes
+  powerful abstractions to the designer in a way that they can reasonably
+  be expected to understand and use to their advantage.
 
-####Facilitate a modular structure.
+* #####Facilitate a modular structure.
 
-Global references should be eliminated in favor of namespaced, lexical
-variables. Selector-based linkages between the DOM and the program should
-be unnecessary.
+  Global references should be eliminated in favor of namespaced, lexical
+  variables. Selector-based linkages between the DOM and the program should
+  be unnecessary.
 
-####Provide uniform means of composition.
+* #####Provide uniform means of composition.
 
-All abstractions should be uniformly composeable, first-class entities.
+  All abstractions should be uniformly composeable, first-class entities.
 
 * #####Use the means of composition provided by the DOM.
 
@@ -176,8 +176,8 @@ All abstractions should be uniformly composeable, first-class entities.
 * #####Provide a first-class abstraction for event streams.
 
   Callback driven DOM manipulation tightly couples DOM structure to event
-  processing code, and dictates a pervasive reliance on side-effects and shared
-  state. First-class event streams allows a more functional approach.
+  processing code, and dictates a pervasive reliance on side-effects and
+  shared state. First-class event streams allows a more functional approach.
 
 # Development
 
