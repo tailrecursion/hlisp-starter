@@ -152,7 +152,7 @@ Have a look at the `project.clj` file:
 
 ```clj
 ;; ---------------------------------------------------------------------------
-;; Leiningen plugins used
+;; Leiningen Plugins
 ;; ---------------------------------------------------------------------------
 ;;
 ;; 1. lein-cljsbuild    To get a ClojureScript REPL going.
