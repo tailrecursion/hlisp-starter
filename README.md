@@ -20,14 +20,14 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
       (:use
         [flapjax.core :only [sync-e]]
         [mytest.ui    :only [make-radio make-tabs]])
-      (:require-macros
-        [mytest.macros :as m]))
+      (:use-macros
+        [mytest.macros :only [def-values]]))
 
     ;; Create a "tabs" set with two trigger elements and two container
     ;; elements. When the trigger element is clicked the associated
     ;; container element is shown and all other containers are hidden.
 
-    (m/def-values
+    (def-values
       [mytabs questiontab question answertab answer]
       (make-tabs "one" li div "one" li div "two"))
 
@@ -39,7 +39,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
     ;; case). The myradio event stream carries values of "one" and "two"
     ;; when the first or second element is clicked on, respectively.
 
-    (m/def-values
+    (def-values
       [myradio showquestion showanswer]
       (make-radio "one" a-void "one" a-void "two"))
 
@@ -102,12 +102,18 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 ## Running a ClojureScript REPL
 
+The ClojureScript REPL compiles ClojureScript forms into JavaScript locally
+and sends them to the browser to be evaluated.
+
 ### Emacs
 
 * `C-x d` to the `cljs-starter` directory
-* `M-x set-variable`, and set the variable `inferior-lisp-program` to `script/cljsrepl`
-* `M-x run-lisp` and you should see an inferior-lisp buffer running a ClojureScript REPL.  Then, visit [http://localhost:4000/](http://localhost:4000/).
-* Hlisp elements print both in the REPL and in the browser console.
+* `M-x set-variable`, and set the variable `inferior-lisp-program` to
+  `script/cljsrepl`
+* `M-x run-lisp` and you should see an inferior-lisp buffer running a
+  ClojureScript REPL.
+* Visit or reload [http://localhost:4000/](http://localhost:4000/) in
+  the browser.
 
 ### Vi
 
@@ -115,10 +121,11 @@ Visit [http://localhost:4000/](http://localhost:4000/) to see the app.
 
 ### Example Session
 
-Hlisp defines vars for all the DOM elements in the following namespaces:
-
-* Project HTML page namespaces.
-* The `hlisp.env` namespace.
+* Hlisp defines vars for all the DOM elements in the following namespaces:
+  * Project HTML page namespaces.
+  * The `hlisp.env` namespace.
+* Hlisp nodes in the REPL are printed as lists.
+* The REPL also prints hlisp nodes in the browser console as DOM elements.
 
 ```
 ClojureScript:cljs.user> (in-ns 'hlisp.env)
@@ -162,11 +169,10 @@ Have a look at the `project.clj` file:
   :hlisp        {:html-src    "src/html"
                  :cljs-src    "src/cljs"
                  :html-out    "resources/public"
+                 :base-dir    "/"
                  :includes    ["src/jslib/jquery.js"]
                  :cljsc-opts  {:optimizations  :whitespace
-                               :externs        ["src/extern/jquery.js"]}} 
-
-  )
+                               :externs        ["src/extern/jquery.js"]}})
 ```
 
 
