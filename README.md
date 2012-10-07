@@ -82,6 +82,44 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 </html>
 ```
 
+# Rationale
+
+The "hlisp" (everything needs a name) project aims to address perceived
+problems confronting front-end user interface (UI) programmers. The goal is to
+provide a basis for a robust development environment where complex structures
+can be built by composing simpler structures such that the results can
+themselves be composed to form even more complex things. A secondary goal is to
+develop a more unified front-end code structure, to maximize the ability to
+express the program functionally, and to minimize the complexity associated
+with shared state and mutable data.
+
+## Composition
+
+The principal issue facing front-end programmers today is that there is no
+unified means of composition. Snippets of HTML strings, template engines,
+server side rendering of HTML, JavaScript selector-based "find and replace"
+libraries and the like do not provide this.
+
+I have started many projects with a clear view of the desired dynamic behaviors
+and DOM structure, thinking to myself "ah, now I will leverage my experience
+and this time I will do everything right, and my code will not balloon into a
+rigid morass". I begin work, and things seem to go well. But little by little
+I always seem to find myself rewriting JavaScript code due to seemingly trivial
+issues such as differences in the DOM structure between components. Every time
+this happens I ruminate on my predicament, refactor, and continue---ultimately
+unsatisfied with the results. In a large project there is always a tipping
+point that is reached where I lose control of the code, and must abandon my
+pure clean code for pragmatic git-r-dun compromises.
+
+Why does this happen? Here are some possible causes:
+
+* Going back to [SICP](http://mitpress.mit.edu/sicp/), the primitive objects,
+  means of abstraction, and means of composition available to the various
+  components of a front-end program are fundamentally incompatible.
+
+  Foo bar.
+* baz baf
+
 # Development
 
 Install [Leiningen2](https://github.com/technomancy/leiningen)
