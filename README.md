@@ -175,7 +175,7 @@ So which properties should the proposed solution have?
 
   Since front-end work ultimately results in DOM structure and manipulation,
   and since HTML markup is to be a core component, the solution should
-  provide a means of abstraction compatible with that of the DOM. That is,
+  provide a means of composition compatible with that of the DOM. That is,
   via tree-like append.
 
 * #####Provide a first-class abstraction for event streams.
