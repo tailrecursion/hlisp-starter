@@ -145,51 +145,27 @@ streams (a prerequisite for minimization of shared state).
 
 ## Goals
 
-In order to develop a set of clear objectives, it is useful to review the
-relevant properties of the various domains in which the front-end developer
-must operate.
+So which properties should the proposed solution have?
 
-### HTML Markup, CSS
-
-* **Syntax and semantics:** Essentially a tree of nodes, where each node
-  consists of a tag name, an attribute/property map, and an array of child
-  nodes.
-* **Set of primitive objects:** There is only really one type of primitive
-  object provided by the DOM: the Element node. Attribute nodes and text nodes
-  are not included here as they can only exist as children, and have a peculiar
-  relationship to the overall tree-like interface provided by the DOM.
-* **Means of composition:** DOM elements can be composed only one way: an
-  element can be appended to another element.
-* **Means of abstraction:** There is no mechanism for giving a name to an HTML
-  structure, other than attaching a global identifier to it. This may
-  take the form of setting the `id` attribute, or it may involve complex,
-  selector-based operations in JavaScript. Higher-order means of abstraction
-  are, of course, completely absent.
-
-### JavaScript
-
-* **Syntax and semantics:** Similar to Java or C. Consists of statements and
-  expressions. Complex syntax rules.
-* **Set of primitive objects:** A relatively rich set, including strings, 
-  numbers, arrays, object maps, functions, a prototype-based type system, and
-  native DOM interoperability.
-* **Means of composition:** Primarily via function application. Statements,
-  which take the place of special forms and macros (which JavaScript lacks),
-  can only be composed at the syntax level, in source files, although there is
-  always the option of `eval` and string concatenation.
-* **Means of abstraction:** Names can be given to any primitive object. Higher
-  order functions are possible, and the primitive collections can all contain
-  the full set of primitive objects as items, more or less uniformly.
-
-### Templating Tools
-
-### Preprocessors
-
-### Serverside Processing
-
-## Possible Solutions
-
-
+* **Don't throw away the HTML markup.** Designers and creative types can't be
+  expected to be highly-skilled, talented programmers. Discarding HTML in
+  favor of a programming language will necessarily introduce another interface
+  with all of the accompanying complexity. Instead, the solution should ideally
+  be one which exposes powerful abstractions to the designer in a way that they
+  can reasonably be expected to understand and use to their advantage.
+* **Facilitate a modular structure.** Global references should be eliminated in
+  favor of namespaced, lexical variables. Selector-based linkages between the
+  DOM and the program should be unnecessary.
+* **Provide uniform means of composition.** All abstractions should be
+  uniformly composeable, first-class entities.
+* **Use the means of composition provided by the DOM.** Since front-end work
+  ultimately results in DOM structure and manipulation, and since HTML
+  markup is to be a core component, the solution should provide a means of
+  abstraction compatible with that of the DOM. That is, via tree-like append.
+* **Provide a first-class abstraction for event streams.** Callback driven DOM
+  manipulation tightly couples DOM structure to event processing code, and
+  dictates a pervasive reliance on side-effects and shared state. First-class
+  event streams allows a more functional approach.
 
 # Development
 
