@@ -93,23 +93,19 @@ develop a more unified front-end code structure, to maximize the ability to
 express the program functionally, and to minimize the complexity associated
 with shared state and mutable data.
 
-## Composition
+## Perceived Problems
 
-The principal issue facing front-end programmers today is that there is no
-unified means of composition. Snippets of HTML strings, template engines,
-server side rendering of HTML, JavaScript selector-based "find and replace"
-libraries and the like do not provide this.
-
-I have started many projects with a clear view of the desired dynamic behaviors
-and DOM structure, thinking to myself "ah, now I will leverage my experience
-and this time I will do everything right, and my code will not balloon into a
-rigid morass". I begin work, and things seem to go well. But little by little
-I always seem to find myself rewriting JavaScript code due to seemingly trivial
-issues such as differences in the DOM structure between components. Every time
-this happens I ruminate on my predicament, refactor, and continue---ultimately
-unsatisfied with the results. In a large project there is always a tipping
-point that is reached where I lose control of the code, and must abandon my
-pure clean code for pragmatic git-r-dun compromises.
+I've started many projects with a clear view of the desired dynamic behaviors
+and DOM structure, thinking to myself, "Ah, now I will leverage my experience
+and this time I will do everything right. I will build a beautiful palace
+of pure and clean code, and this time it won't balloon into a rigid morass
+of imperative boilerplate." I begin work, and things seem to go well. But
+little by little I always seem to find myself rewriting JavaScript code due
+to seemingly trivial issues, such as differences in the DOM structure between
+components. Every time this happens I ruminate on my predicament, refactor,
+and continue&mdash;ultimately unsatisfied with the results. In a large project
+there is always a tipping point that is reached where I lose control of the
+code, and must abandon my pure clean code for pragmatic git-r-dun compromises.
 
 Why does this happen? Here are some possible causes:
 
