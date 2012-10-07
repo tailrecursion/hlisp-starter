@@ -173,7 +173,7 @@ must operate.
 * **Set of primitive objects:** A relatively rich set, including strings, 
   numbers, arrays, object maps, functions, a prototype-based type system, and
   native DOM interoperability.
-* **Means of composition:** Primarily that of function application. Statements,
+* **Means of composition:** Primarily via function application. Statements,
   which take the place of special forms and macros (which JavaScript lacks),
   can only be composed at the syntax level, in source files, although there is
   always the option of `eval` and string concatenation.
