@@ -166,14 +166,14 @@ be unnecessary.
 
 All abstractions should be uniformly composeable, first-class entities.
 
-* ####Use the means of composition provided by the DOM.
+* #####Use the means of composition provided by the DOM.
 
   Since front-end work ultimately results in DOM structure and manipulation,
   and since HTML markup is to be a core component, the solution should
   provide a means of abstraction compatible with that of the DOM. That is,
   via tree-like append.
 
-* ####Provide a first-class abstraction for event streams.
+* #####Provide a first-class abstraction for event streams.
 
   Callback driven DOM manipulation tightly couples DOM structure to event
   processing code, and dictates a pervasive reliance on side-effects and shared
