@@ -115,12 +115,12 @@ Why does this happen? The rest of this section lists some possible causes.
 
 ### Primitives, Abstraction, and Composition
 
-Front-end programs generally involve a number of disparate domains: there is
-the HTML markup itself, CSS rules, JavaScript programs and libraries,
+Front-end programs generally involve a number of disparate domains: there
+is the HTML markup itself, CSS rules, JavaScript programs and libraries,
 templating tools, and preprocessors. Sometimes the HTML markup itself is
-"rendered" on the server by a program written in another language. There is no
-unified environment with common primitives, means of abstraction, and means of
-composition.
+rendered on the server by a program written in yet another language. There
+is no unified environment with common primitives, means of abstraction,
+and means of composition.
 
 This presents the programmer with an extremely difficult design problem when
 he is developing the architecture of his program. The slightest misstep when
@@ -142,6 +142,47 @@ job by imperatively mutating shared state. The lack of an abstraction
 encompassing the event stream itself only exacerbates the problems inherent in
 the callback system, and prevents more functional composition of the event
 streams (a prerequisite for minimization of shared state).
+
+Let's examine the common domains in which a modern front-end developer must
+operate.
+
+### HTML Markup, CSS
+
+It's hard to imagine a time when the front-end developer will not have to deal
+with HTML markup. HTML is firmly established as the langua franca of the web:
+search engines consume it, designers and creative types produce it, and
+browsers render it. A solution that excludes the ability to write HTML
+introduces yet another interface between the designer and the programmer, with
+all of the added complexity associated with that.
+
+The issues with HTML markup include:
+
+1. **Limited set of primitive objects:** There is only really one type of
+   primitive object provided by the DOM: the Element node. There are no
+   primitive strings, numbers, symbols, functions, etc.
+2. **Limited means of composition:** DOM elements can be composed only one way:
+   an element can be appended to another element as a child.
+3. **Limited means of abstraction:** There is no mechanism for giving a name to
+   an HTML structure, other than attaching a global identifier to it. This may
+   take the form of setting the `id` attribute, or it may involve complex,
+   selector-based operations in JavaScript.
+4. **Dependence on shared, mutable state:** Item #3 dictates that interactions
+   involving separate HTML entities must involve mechanisms to keep track of
+   specific DOM objects which must, then, be mutable, and a global shared
+   state that can be referenced by the various isolated components that operate
+   on those HTML entities.
+
+### JavaScript
+
+### Templating Tools
+
+### Preprocessors
+
+### Serverside Processing
+
+## Possible Solutions
+
+
 
 # Development
 
