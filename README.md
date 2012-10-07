@@ -151,6 +151,9 @@ must operate.
 
 ### HTML Markup, CSS
 
+* **Syntax and semantics:** Essentially a tree of nodes, where each node
+  consists of a tag name, an attribute/property map, and an array of child
+  nodes.
 * **Set of primitive objects:** There is only really one type of primitive
   object provided by the DOM: the Element node. Attribute nodes and text nodes
   are not included here as they can only exist as children, and have a peculiar
@@ -162,13 +165,21 @@ must operate.
   take the form of setting the `id` attribute, or it may involve complex,
   selector-based operations in JavaScript. Higher-order means of abstraction
   are, of course, completely absent.
-* **Dependence on shared, mutable state:** Item #3 dictates that interactions
-  involving separate HTML entities must involve mechanisms to keep track of
-  specific DOM objects which must, then, be mutable, and a global shared
-  state that can be referenced by the various isolated components that operate
-  on those HTML entities.
 
 ### JavaScript
+
+* **Syntax and semantics:** Similar to Java or C. Consists of statements and
+  expressions. Complex syntax rules.
+* **Set of primitive objects:** A relatively rich set, including strings, 
+  numbers, arrays, object maps, functions, a prototype-based type system, and
+  native DOM interoperability.
+* **Means of composition:** Primarily that of function application. Statements,
+  which take the place of special forms and macros (which JavaScript lacks),
+  can only be composed at the syntax level, in source files, although there is
+  always the option of `eval` and string concatenation.
+* **Means of abstraction:** Names can be given to any primitive object. Higher
+  order functions are possible, and the primitive collections can all contain
+  the full set of primitive objects as items, more or less uniformly.
 
 ### Templating Tools
 
