@@ -162,6 +162,11 @@ So which properties should the proposed solution have?
   variables. Selector-based linkages between the DOM and the program should
   be unnecessary.
 
+* ##### Facilitate development of a rich, general library framework.
+
+  It should be possible to develop abstractions of increasing complexity by
+  composition of simpler ones. 
+
 * #####Provide uniform means of composition.
 
   All abstractions should be uniformly composeable, first-class entities.
