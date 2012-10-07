@@ -103,18 +103,19 @@ of imperative boilerplate." I begin work, and things seem to go well. But
 little by little I always seem to find myself rewriting JavaScript code due
 to seemingly trivial issues, such as differences in the DOM structure between
 components. Every time this happens I ruminate on my predicament, refactor,
-and continue&mdash;ultimately unsatisfied with the results. In a large project
-there is always a tipping point that is reached where I lose control of the
-code, and must abandon my pure clean code for pragmatic git-r-dun compromises.
+and continue&mdash;ultimately unsatisfied with the results.
 
-Why does this happen? Here are some possible causes:
+In a large project there always seems to be a tipping point where I
+lose control of the code and start to consider more pragmatic git-r-dun
+compromises. At this point I begin to realize that minor mistakes
+in architecture have become difficult to fix, which results in further
+compromises and code bloat.
 
-* Going back to [SICP](http://mitpress.mit.edu/sicp/), the primitive objects,
-  means of abstraction, and means of composition available to the various
-  components of a front-end program are fundamentally incompatible.
+Why does this happen? The rest of this section lists some possible causes.
 
-  Foo bar.
-* baz baf
+### Primitives, Abstraction, and Composition
+
+
 
 # Development
 
