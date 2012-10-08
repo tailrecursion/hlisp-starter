@@ -128,7 +128,22 @@ provide a solution to the above problems?
   references is available in both the library code and the markup itself. The
   markup elements become first-class entities.
 
-## Architecture
+## Issues
+
+What are the important issues that must be solved?
+
+* **Semantic differences between Lisp and HTML.**
+
+  HTML is sort of a [Lisp-1.5](http://en.wikipedia.org/w/index.php?title=Common_Lisp&oldid=402600249#The_function_namespace)
+  The [car](http://en.wikipedia.org/wiki/CAR_and_CDR) of the list representation
+  of an HTML element is the tag name. This must be a symbol and can't be another
+  list. This is a departure from Lisp's uniform treatment of list elements,
+  where the evaluator evals the car as well as the cdr. HTML semantics can't
+  express this, for example:
+
+  ```
+  ((f x) y z)
+  ```
   
 * **Interpreted vs. compiled Lisp.**
 
