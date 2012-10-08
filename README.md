@@ -118,6 +118,14 @@ language, for the following reasons:
   handling the demands of user interface programming. Templating tools,
   event handling, etc. can all be implemented in Lisp.
 
+* **Evaluating HTML as Lisp unifies the evaluation environment.**
+
+  Since the markup is code that is evaluated in some environment, lexical
+  scope, namespaced references, and all the other Lisp mechanisms for managing
+  references is available in both the library code and the markup itself. The
+  markup elements become first-class entities.
+  
+
 ## Demo
 
 Here is the example `index.html` file:
