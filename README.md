@@ -139,15 +139,31 @@ What are the important issues that must be solved?
   of an HTML element is the tag name. This must be a symbol and can't be another
   list. This is a departure from Lisp's uniform treatment of list elements,
   where the evaluator evals the car as well as the cdr. HTML semantics can't
-  express this, for example:
+  express `((f x) y z)`, for example.
 
-  ```
-  ((f x) y z)
-  ```
-  
+  This is a result of the fact that there are no HTML primitives other than the
+  Element node, which means that all elements are semantically lists. This
+  makes it impossible to express `(f)` (meaning function application with no
+  arguments), without giving up the capability to express `f` (function as a
+  value).
+
+  **Solution:** Give up ability to call functions without arguments from HTML
+  markup. This can be accounted for by simply requiring that all functions that
+  are exposed to the user take an argument, even if they discard it. This
+  preserves the ability to reference functions as values, which is key for the
+  formation of higher-order functions, and is central to Lisp. In a functional
+  system, zero-argument functions are rare, as they can only produce side
+  effects.
+
 * **Interpreted vs. compiled Lisp.**
 
-  
+  Interpreted Lisp has a number of advantages: runtime eval, complete control
+  over evaluation and environment. But there are disadvantages: performance
+  suffers, JavaScript interop is complicated. Compiled Lisp should perform
+  better and have better interop characteristics.
+
+  **Solution:** Go with compiled Lisp, since an excellent implementation,
+  ClojureScript, already exists.
 
 ## Demo
 
