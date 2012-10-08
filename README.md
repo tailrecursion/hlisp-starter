@@ -115,7 +115,8 @@ language, for the following reasons:
 * **Lisp is flexible enough to encompass all of the disparate domains.**
 
   The power and flexibility of a full-featured Lisp is more than capable of
-  handling the demands of user interface programming.
+  handling the demands of user interface programming. Templating tools,
+  event handling, etc. can all be implemented in Lisp.
 
 ## Demo
 
