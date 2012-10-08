@@ -82,7 +82,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 </html>
 ```
 
-## Concept
+## Motivation &amp; Project Goals
 
 This project aims to address some of the causes of incidental complexity in
 frontend (user interface) web development.
@@ -132,6 +132,8 @@ frontend (user interface) web development.
 
   **Goal:** Push-based event system, first-class event streams, and composable
   event handlers.
+
+## Concept
 
 # Development
 
