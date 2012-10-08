@@ -7,7 +7,7 @@ mitigate several significant problems with interactive web development.
 **You may want to:**
 
 * Look at the [demo](http://micha.github.com/hlisp-starter/).
-* See the [design document](http://micha.github.com/hlisp-starter/PROJECT.md).
+* See the [design document](https://github.com/micha/hlisp-starter/blob/master/PROJECT.md).
 
 Here is the example `index.html` file:
 
