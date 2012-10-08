@@ -4,7 +4,7 @@ HLisp is a lisp implementation built atop
 [ClojureScript](https://github.com/clojure/clojurescript/wiki) that attempts to
 mitigate several significant problems with interactive web development. A
 prototype implementation demo can be viewed
-[here](http://micha.github.com/hlisp-starter/)).
+[here](http://micha.github.com/hlisp-starter/).
 
 ## Motivation, Project Goals
 
