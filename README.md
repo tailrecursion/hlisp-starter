@@ -163,7 +163,7 @@ What are the important issues that must be solved?
   preserves the ability to reference functions as values, which is key for the
   formation of higher-order functions, and is central to Lisp. In a functional
   system, zero-argument functions are rare, as they can only produce side
-  effects.
+  effects. Additionally, some kind of [funcall](http://www.lispworks.com/documentation/HyperSpec/Body/f_funcal.htm) or [call](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call) mechanism can be used to accomodate the former case.
 
 * **Syntactic differences between Lisp and HTML.**
 
@@ -171,9 +171,14 @@ What are the important issues that must be solved?
   tedious to write a lot of functional code in HTML. A mechanism must be
   available by which the programmer can program in Lisp or HTML, as required.
 
+  HTML tags also have different syntactic requirements from Lisp symbols. There
+  are some symbols which are not [valid HTML tags](http://stackoverflow.com/questions/7065693/is-the-at-sign-a-valid-html-xml-tag-character).
+
   **Solution:** The document `<head>` must contain a
   `<script type="text/hlisp">` element. Lisp source can be contained in this
-  script element, to be evaluated in the environment of the page.
+  script element, to be evaluated in the environment of the page. Furthermore,
+  it's possible to simply refrain from naming user-level functions and entities
+  with names that are not compatible with both.
 
 * **Code libraries and namespaces.**
 
