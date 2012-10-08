@@ -87,7 +87,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 This project aims to address some of the causes of incidental complexity in
 frontend (user interface) web development.
 
-* **Too many disparate domains.**
+1. **Too many disparate domains.**
 
   The programmer must manage too many tightly
   coupled, fundamentally incompatible subsystems: HTML markup, CSS rules,
@@ -110,7 +110,9 @@ frontend (user interface) web development.
   **Goal:** Single, unified set of primitives, means of abstraction, and means
   of composition.
   
-* **Pervasive use of global references and shared, mutable state.** The lack
+2. **Pervasive use of global references and shared, mutable state.**
+
+  The lack
   of a common set of primitives or means of abstraction/composition dictates
   the use of global identifiers to pass information between domains. This
   could be setting the `id` attribute of an element, or it could be a more
@@ -118,7 +120,9 @@ frontend (user interface) web development.
 
   **Goal:** Unified namespace with lexical scope for all entities.
 
-* **Callback based event handling.** The browser event handling system is
+3. **Callback based event handling.**
+
+  The browser event handling system is
   designed around a callback mechanism. Callbacks generally have the void type
   (aside from those that return boolean false to cause side effects). Thus,
   there is no way to compose them, and they must rely entirely on side effects
