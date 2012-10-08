@@ -99,12 +99,23 @@ language, for the following reasons:
   semantically equivalent to Lisp function application. This is also the
   means of composition in both systems.
 
+## HTML-As-Lisp is a Possible Solution
+
 * **The HTML document can be evaluated as a Lisp program.**
 
   Given that HTML and Lisp are semantically compatible, it's possible to
   actually evaluate an HTML document as a Lisp program. The browser could be
   made to evaluate the body of the document when the page loads and replace
   the body contents with the result.
+
+* **Lisp provides rich means of abstraction.**
+
+  The abstraction-building capability of Lisp is well known.
+
+* **Lisp is flexible enough to encompass all of the disparate domains.**
+
+  The power and flexibility of a full-featured Lisp is more than capable of
+  handling the demands of user interface programming.
 
 ## Demo
 
