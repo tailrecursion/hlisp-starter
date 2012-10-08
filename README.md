@@ -114,6 +114,8 @@ frontend (user interface) web development.
   could be setting the `id` attribute of an element, or it could be a more
   complicated selector-based mechanism.
 
+  **Goal:** Unified namespace with lexical scope for all entities.
+
 * **Callback based event handling.** The browser event handling system is
   designed around a callback mechanism. Callbacks generally have the void type
   (aside from those that return boolean false to cause side effects). Thus,
