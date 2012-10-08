@@ -7,7 +7,7 @@
 (defn core-event [ev]
   (let [r (js/receiverE)]
     (-> (jq/$ "body")
-      (.on "click" (fn [v] (.sendEvent r v))))
+      (.on ev (fn [v] (.sendEvent r v))))
     r))
 
 (def *clicks*   (core-event "click"))
@@ -76,10 +76,12 @@
 (defn dom-toggle! [elem v]
   (.toggle (dom-get elem) v))
 
-(defn receiver-e [init]
-  (let [r (js/receiverE)]
-    (add-initfn! #(.sendEvent r init))
-    r))
+(defn init-e [rcv v]
+  (add-initfn! #(.sendEvent rcv v))
+  rcv)
+
+(defn receiver-e [& init]
+  (reduce init-e (js/receiverE) init))
 
 (defn send-e [rcv v]
   (.sendEvent rcv v))
