@@ -148,12 +148,11 @@ compiles to JavaScript.
 * Good JavaScript interoperability.
 * [Uses Google's Closure library and compiler](https://github.com/clojure/clojurescript/wiki/Google-Closure).
 * Supports aggressive optimization, dead code removal, etc.
-* ClojureScript leverages Clojure to advantage: hlisp compiler can use the
-  Clojure reader to parse forms&mdash;it's the same as the cljs reader.
-* A natural choice if the compiler is to be written in Clojure, which is a big
-  plus.
+* Hlisp compiler can use the Clojure reader to parse forms&mdash;it's the same
+  as the cljs reader.
 * There are excellent tools for managing Clojure projects that can be used
   immediately to manage hlisp projects.
+* A natural choice if the compiler is to be written in Clojure.
 
 ### LispyScript
 
