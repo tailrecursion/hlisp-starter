@@ -128,6 +128,25 @@ provide a solution to the above problems?
   references is available in both the library code and the markup itself. The
   markup elements become first-class entities.
 
+## The Base Lisp Implementation
+
+If Lisp is to be the environment, the next question is, "Which one?"
+
+* **ClojureScript**
+
+  ClojureScript is a Lisp that compiles to JavaScript.
+
+  * Foo bar
+  * Baz baf
+
+* **A Test**
+
+  This is a test.
+
+  * Hey
+  * There
+
+
 ## Issues
 
 What are the important issues that must be solved?
