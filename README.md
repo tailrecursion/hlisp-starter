@@ -80,7 +80,7 @@ frontend (user interface) web development.
   some mechanism for managing references, namespaces, etc. Some way to
   distribute libraries and include them in projects is also key.
 
-## HTML is Semantically Compatible with Lisp.
+## HTML is Semantically Compatible with Lisp
 
 To achieve the above goals, it is necessary to perform all front-end processing
 in a single, unified evaluation environment. The semantic structure of HTML
