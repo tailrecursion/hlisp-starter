@@ -266,10 +266,11 @@ does the following:
    cljs compiler.
 7. Initialization JavaScript for the page is generated and inserted into the
    HTML output, which is written to a file.
-8. The cljs compiler is invoked, compiling all cljs for all pages into one
-   JavaScript file, `main.js`. External libraries can be prepended to `main.js`
-   at this point.
-9. The product of the hlisp compiler is the output HTML files and `main.js`.
+
+Then, when all HTML source files have been processed, the cljs compiler is
+invoked, producing a single JavaScript file: `main.js`. External libraries
+can be prepended to `main.js` at this point. The product of the hlisp compiler
+is the output HTML files and `main.js`.
 
 ## Related Projects
 
