@@ -201,6 +201,13 @@ What are the important issues that must be solved?
   tools could be developed that far exceed the capabilities of current
   templating systems without giving up the unified evaluation environment.
 
+## Related Projects
+
+* [lein-hlisp](https://github.com/micha/lein-hlisp) The HLisp compiler.
+* [Hlisp](https://github.com/micha/hlisp) Previous attempt at interpreted Lisp.
+* [Declarify.js](https://github.com/micha/declarify.js) Exploration of FRP in the browser.
+* [Golf](https://github.com/golf/golf) Initial attempts.
+
 ## Demo
 
 Here is the example `index.html` file:
