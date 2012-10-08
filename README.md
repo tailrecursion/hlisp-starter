@@ -116,7 +116,7 @@ frontend (user interface) web development.
   domains. This could be setting the `id` attribute of an element, or it
   could be a more complicated selector-based mechanism.
 
-  **Goal:** Unified execution environment and namespace with lexical scope for
+  **Goal:** Unified evaluation environment and namespace with lexical scope for
   all entities.
 
 * **Callback based event handling.**
