@@ -80,23 +80,32 @@ frontend (user interface) web development.
   some mechanism for managing references, namespaces, etc. Some way to
   distribute libraries and include them in projects is also key.
 
-## Approach
+## HTML is Semantically Compatible with Lisp.
+
+To achieve the above goals, it is necessary to perform all front-end processing
+in a single, unified evaluation environment. The semantic structure of HTML
+suggests a [Lisp](http://en.wikipedia.org/wiki/Lisp_(programming_language) type
+language, for the following reasons:
 
 * **HTML structure is fundamentally lists.**
 
   A DOM element is semantically a list structure. Tools like
   [hiccup](https://github.com/weavejester/hiccup) use this characteristic to
-  advantage. This suggests a
-  [Lisp](http://en.wikipedia.org/wiki/Lisp_(programming_language) type language
-  for the underlying programming environment.
+  advantage. The HTML `<div id="foo"><h1></h1><p></p></div>` can be represented
+  equivalently by a list `(div {:id "foo"} h1 p)`.
 
 * **DOM appendChild is semantically equivalent to Lisp function application.**
 
   With one caveat (elaborated below), appending children to a DOM element is
-  semantically equivalent to Lisp function application. Also, the means of
-  composition in both Lisp and HTML is
-  [cons](http://clojuredocs.org/clojure_core/clojure.core/cons) (A.K.A
-  [appendChild](https://developer.mozilla.org/en-US/docs/DOM/Node.appendChild)).
+  semantically equivalent to Lisp function application. This is also the
+  means of composition in both systems.
+
+* **The HTML document can be evaluated as a Lisp program.**
+
+  Given that HTML and Lisp are semantically compatible, it's possible to
+  actually evaluate an HTML document as a Lisp program. The browser could be
+  made to evaluate the body of the document when the page loads and replace
+  the body contents with the result.
 
 ## Demo
 
