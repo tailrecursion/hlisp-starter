@@ -82,6 +82,21 @@ frontend (user interface) web development.
 
 ## Approach
 
+* **HTML structure is fundamentally lists.**
+
+  A DOM element is semantically a list structure. Tools like
+  [hiccup](https://github.com/weavejester/hiccup) use this characteristic to
+  advantage. This suggests a
+  [Lisp](http://en.wikipedia.org/wiki/Lisp_(programming_language) type language
+  for the underlying programming environment.
+
+* **DOM appendChild is semantically equivalent to Lisp function application.**
+
+  With one caveat (elaborated below), appending children to a DOM element is
+  semantically equivalent to Lisp function application. Also, the means of
+  composition in both Lisp and HTML is
+  [cons](http://clojuredocs.org/clojure_core/clojure.core/cons) (A.K.A
+  [appendChild](https://developer.mozilla.org/en-US/docs/DOM/Node.appendChild)).
 
 ## Demo
 
