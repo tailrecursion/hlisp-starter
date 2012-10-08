@@ -226,6 +226,51 @@ What are the important issues that must be solved?
   is merely another client. Tools such as [wigwam](https://github.com/micha/wigwam)
   already exist and can be used.
 
+## Architecture
+
+An hlisp project consists of the following components:
+
+* **The hlisp compiler.** Implemented as a [leiningen](https://github.com/technomancy/leiningen)
+  plugin.
+
+* **ClojureScript libraries.** Existing libraries can be used without
+  modification in most cases. The only issue is names that are not valid HTML
+  tags, but the soultion is usually simply to alias those refs.
+
+* **Clojure macros.** Macros used in ClojureScript must be written in Clojure,
+  which has certain limiting consequences. Hopefully full cljs macro support is
+  on the way, though.
+
+* **HTML source files.** The actual HTML source files that make up the site.
+
+* **External JavaScript libraries.** JavaScript libraries such as jQuery and
+  Flapjax, for instance, which can be used in the ClojureScript environment.
+
+## Compiler
+
+The hlisp compiler scans for HTML source files. For each source file found it
+does the following:
+
+1. Extract the `<script type="text/hlisp">` tag from the document `<head>`.
+2. Use the cljs reader to read the text contents as cljs forms.
+3. Extract the namespace declaration (must be the first form).
+4. Insert a cljs "prelude" in between the namespace declaration and the rest of
+   the forms from step 2. This prelude has definitions for things that need to
+   be provided by hlisp in the page namespace. When/if support for `:use`
+   without `:only` is available in cljs the prelude can be removed.
+5. The document `<body>` is parsed as a cljs form, wrapped in a function
+   definition, and appended to the other forms. This defines the page's
+   `hlispinit` function, which is marked as `^:export`, so that the Closure
+   compiler won't munge its name.
+6. The cljs forms are written to a source file that will be compiled by the
+   cljs compiler.
+7. Initialization JavaScript for the page is generated and inserted into the
+   HTML output, which is written to a file.
+8. The cljs compiler is invoked, compiling all cljs for all pages into one
+   JavaScript file, `main.js`. External libraries can be prepended to `main.js`
+   at this point.
+9. The product of the hlisp compiler is the output HTML files and `main.js`.
+
 ## Related Projects
 
 * [lein-hlisp](https://github.com/micha/lein-hlisp) The HLisp compiler.
