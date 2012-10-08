@@ -112,9 +112,20 @@ frontend (user interface) web development.
   of a common set of primitives or means of abstraction/composition dictates
   the use of global identifiers to pass information between domains. This
   could be setting the `id` attribute of an element, or it could be a more
-  complicated selector-based mechanism. Either way, this practice forces the
-  use of shared mutable state.
+  complicated selector-based mechanism.
 
+* **Callback based event handling.** The browser event handling system is
+  designed around a callback mechanism. Callbacks generally have the void type
+  (aside from those that return boolean false to cause side effects). Thus,
+  there is no way to compose them, and they must rely entirely on side effects
+  and shared state to perform their tasks.
+
+  Event streams are not first-class entities, so there is no way to form
+  abstractions around them. They can't be composed with each other. They can't
+  be locally referenced. This forces even more shared state upton the system.
+
+  **Goal:** Push-based event system, first-class event streams, and composable
+  event handlers.
 
 # Development
 
