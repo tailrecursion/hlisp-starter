@@ -106,8 +106,8 @@ frontend (user interface) web development.
   orthogonal in one of the other domains. The ability to create more specific
   abstractions by composition of more general ones is greatly restricted.
 
-  **Goal:** Single, unified execution environment, set of primitives, means of
-  abstraction, and means of composition.
+  **Goal:** Single, unified set of primitives, means of abstraction, and
+  means of composition.
   
 * **Pervasive use of global references and shared, mutable state.**
 
@@ -116,7 +116,8 @@ frontend (user interface) web development.
   domains. This could be setting the `id` attribute of an element, or it
   could be a more complicated selector-based mechanism.
 
-  **Goal:** Unified namespace with lexical scope for all entities.
+  **Goal:** Unified execution environment and namespace with lexical scope for
+  all entities.
 
 * **Callback based event handling.**
 
