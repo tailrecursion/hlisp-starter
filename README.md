@@ -155,6 +155,16 @@ What are the important issues that must be solved?
   system, zero-argument functions are rare, as they can only produce side
   effects.
 
+* **Syntactic differences between Lisp and HTML.**
+
+  Clearly, HTML is vastly more verbose than Lisp is. It would be exceedingly
+  tedious to write a lot of functional code in HTML. A mechanism must be
+  available by which the programmer can program in Lisp or HTML, as required.
+
+  **Solution:** The document `<head>` must contain a
+  `<script type="text/hlisp">` element. Lisp source can be contained in this
+  script element, to be evaluated in the environment of the page.
+
 * **Interpreted vs. compiled Lisp.**
 
   Interpreted Lisp has a number of advantages: runtime eval, complete control
