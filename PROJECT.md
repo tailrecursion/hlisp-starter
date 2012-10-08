@@ -132,19 +132,19 @@ provide a solution to the above problems?
 
 If Lisp is to be the environment, the next question is, "Which one?"
 
-* **ClojureScript**
+### ClojureScript
 
-  ClojureScript is a Lisp that compiles to JavaScript.
+ClojureScript is a Lisp that compiles to JavaScript.
 
-  * Foo bar
-  * Baz baf
+* Foo bar
+* Baz baf
 
-* **A Test**
+### A Test
 
-  This is a test.
+This is a test.
 
-  * Hey
-  * There
+* Hey
+* There
 
 
 ## Issues
