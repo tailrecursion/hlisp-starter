@@ -91,8 +91,7 @@ language, for the following reasons:
 
   A DOM element is semantically a list structure. Tools like
   [hiccup](https://github.com/weavejester/hiccup) use this characteristic to
-  advantage. The HTML `<div id="foo"><h1></h1><p></p></div>` can be represented
-  equivalently by a list `(div {:id "foo"} h1 p)`.
+  advantage.
 
 * **DOM appendChild is semantically equivalent to Lisp function application.**
 
