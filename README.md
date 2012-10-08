@@ -82,10 +82,12 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 </html>
 ```
 
-## Motivation &amp; Project Goals
+# Concept
 
 This project aims to address some of the causes of incidental complexity in
 frontend (user interface) web development.
+
+## Motivation, Project Goals
 
 * **Too many disparate domains.**
 
@@ -133,7 +135,31 @@ frontend (user interface) web development.
   **Goal:** Push-based event system, first-class event streams, and composable
   event handlers.
 
-## Concept
+### Additional Requirements
+
+* **Don't get rid of HTML.**
+
+  Designers will need to work with HTML markup. The browser renders it. The
+  elimination of HTML markup would necessarily introduce complexity in the
+  form of an interface between the designer and the programmer, at the very
+  least. So if possible, keep HTML markup as the primary means of building the
+  front end DOM structure.
+
+* **Simple to learn, minimal tooling to get started.**
+
+  The system should be learnable by the motivated designer. They shouldn't have
+  to be skilled programmers to use it. The system should expose useful
+  functionality to the user without requiring a lot of boilerplate setup code.
+
+* **Robust set of libraries.**
+
+  It must be practical to build extensive libraries of modular code. This means
+  some mechanism for managing references, namespaces, etc. Some way to
+  distribute libraries and include them in projects is also key.
+
+## Approach
+
+
 
 # Development
 
