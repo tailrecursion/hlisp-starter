@@ -170,7 +170,6 @@ What are the important issues that must be solved?
   Clearly, HTML is vastly more verbose than Lisp is. It would be exceedingly
   tedious to write a lot of functional code in HTML. A mechanism must be
   available by which the programmer can program in Lisp or HTML, as required.
-
   HTML tags also have different syntactic requirements from Lisp symbols. There
   are some symbols which are not [valid HTML tags](http://stackoverflow.com/questions/7065693/is-the-at-sign-a-valid-html-xml-tag-character).
 
