@@ -165,6 +165,24 @@ What are the important issues that must be solved?
   **Solution:** Go with compiled Lisp, since an excellent implementation,
   ClojureScript, already exists.
 
+* **Event handlers and dynamic interface.**
+
+  How will the goals of first-class event streams and composable callbacks be
+  satisfied? Is there existing library code that can be used in situ or with
+  reasonable modification?
+
+  **Solution:** The [flapjax](http://flapjax-lang.org/) library is an excellent
+  implementation of FRP in the browser. It provides all the features required.
+
+* **Cross-browser DOM API library.**
+
+  Which cross-browser DOM API library should be used?
+
+  **Solution:** Hlisp core will be built on cljs, which includes the
+  [Google Closure](https://developers.google.com/closure/) DOM libraries.
+  However, projects built on top of the core could use other more user-friendly
+  libraries.
+
 ## Demo
 
 Here is the example `index.html` file:
