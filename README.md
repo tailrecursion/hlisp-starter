@@ -105,8 +105,8 @@ frontend (user interface) web development.
   orthogonal in one of the other domains. The ability to create more specific
   abstractions by composition of more general ones is greatly restricted.
 
-  * **Goal:** Single, unified set of primitives, means of abstraction, and
-    means of composition.
+  **Goal:** Single, unified set of primitives, means of abstraction, and means
+  of composition.
   
 * **Pervasive use of global references and shared, mutable state.** The lack
   of a common set of primitives or means of abstraction/composition dictates
