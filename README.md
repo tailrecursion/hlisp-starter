@@ -239,7 +239,7 @@ An hlisp project consists of the following components:
 
 * **ClojureScript libraries.** Existing libraries can be used without
   modification in most cases. The only issue is names that are not valid HTML
-  tags, but the soultion is usually simply to alias those refs.
+  tags, but the solution is usually simply to alias those refs.
 
 * **Clojure macros.** Macros used in ClojureScript must be written in Clojure,
   which has certain limiting consequences. Hopefully full cljs macro support is
