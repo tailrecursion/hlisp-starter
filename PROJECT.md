@@ -151,16 +151,6 @@ This is a test.
 
 What are the important issues that must be solved?
 
-* **Interpreted vs. compiled Lisp.**
-
-  Interpreted Lisp has a number of advantages: runtime eval, complete control
-  over evaluation and environment. But there are disadvantages: performance
-  suffers, JavaScript interop is complicated. Compiled Lisp should perform
-  better and have better interop characteristics.
-
-  **Solution:** Go with compiled Lisp, since an excellent implementation,
-  ClojureScript, already exists.
-
 * **Semantic differences between Lisp and HTML.**
 
   HTML is sort of a [Lisp-1.5](http://en.wikipedia.org/w/index.php?title=Common_Lisp&oldid=402600249#The_function_namespace)
