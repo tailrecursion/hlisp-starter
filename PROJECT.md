@@ -128,7 +128,7 @@ provide a solution to the above problems?
   references is available in both the library code and the markup itself. The
   markup elements become first-class entities.
 
-## The Base Lisp Implementation
+## Choice of Lisp Implementation
 
 If Lisp is to be the environment, the next question is, "Which one?"
 
