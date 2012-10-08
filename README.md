@@ -233,6 +233,10 @@ An hlisp project consists of the following components:
 * **The hlisp compiler.** Implemented as a [leiningen](https://github.com/technomancy/leiningen)
   plugin.
 
+* **The hlisp library.** A cljs library provides the implementation for the
+  ElemNode and TextNode deftypes. All of the HTML elements, p, div, span, etc.,
+  are defined in the page namespace.
+
 * **ClojureScript libraries.** Existing libraries can be used without
   modification in most cases. The only issue is names that are not valid HTML
   tags, but the soultion is usually simply to alias those refs.
