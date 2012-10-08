@@ -136,7 +136,7 @@ If Lisp is to be the environment, the next question is, "Which one?"
 
 ClojureScript is a Lisp that compiles to JavaScript.
 
-* Foo bar
+* [Most of the features of Clojure](https://github.com/clojure/clojurescript/wiki/Differences-from-Clojure).
 * Baz baf
 
 ### A Test
