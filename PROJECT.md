@@ -130,22 +130,46 @@ provide a solution to the above problems?
 
 ## Choice of Lisp Implementation
 
-If Lisp is to be the environment, the next question is, "Which one?"
+If Lisp is to be the environment, the next question is, "Which one?" After some
+experimentation ClojureScript was chosen. Possible choices were:
 
 ### ClojureScript
 
-ClojureScript is a Lisp that compiles to JavaScript.
+[ClojureScript](https://github.com/clojure/clojurescript) is a Lisp that
+compiles to JavaScript.
 
 * [Most of the features of Clojure](https://github.com/clojure/clojurescript/wiki/Differences-from-Clojure).
-* Baz baf
+* [Persistent, immutable data structures, and lazy sequences](http://clojure.org/data_structures).
+* Excellent [type system](http://clojure.org/data_structures) with records,
+  "deftype" types, [protocols](http://clojure.org/protocols),
+  [multimethods](http://clojure.org/multimethods), etc.
+* [Macros](http://clojure.org/macros). (Currently macros are somewhat limited,
+  but that will probably improve over time.)
+* Good JavaScript interoperability.
+* [Uses Google's Closure library and compiler](https://github.com/clojure/clojurescript/wiki/Google-Closure).
+* Supports aggressive optimization, dead code removal, etc.
+* ClojureScript leverages Clojure to advantage: hlisp compiler can use the
+  Clojure reader to parse forms&mdash;it's the same as the cljs reader.
+* A natural choice if the compiler is to be written in Clojure, which is a big
+  plus.
+* There are excellent tools for managing Clojure projects that can be used
+  immediately to manage hlisp projects.
 
-### A Test
+### LispyScript
 
-This is a test.
+[LispyScript](http://lispyscript.com/) is JavaScript with Lispy syntax and
+macros.
 
-* Hey
-* There
+* Excellent JavaScript interop, since it _is_ JavaScript.
+* [Macros](http://lispyscript.com/docs/#macros).
+* [Monads](http://lispyscript.com/docs/#monads)&mdash;the [VX module](http://vxmodules.wikia.com/wiki/What_is_a_VX_module)
+  of functional programming. Just kidding.
+* [Templates](http://lispyscript.com/docs/#templates)
 
+### Custom Interpreter
+
+This approach was tried initially but there were issues with JavaScript
+interoperability and performance was not stellar.
 
 ## Issues
 
