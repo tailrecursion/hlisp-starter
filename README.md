@@ -99,7 +99,7 @@ language, for the following reasons:
   semantically equivalent to Lisp function application. This is also the
   means of composition in both systems.
 
-## HTML-As-Lisp is a Possible Solution
+## A Possible Solution
 
 * **The HTML document can be evaluated as a Lisp program.**
 
