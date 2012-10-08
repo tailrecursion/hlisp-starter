@@ -268,9 +268,9 @@ does the following:
    HTML output, which is written to a file.
 
 Then, when all HTML source files have been processed, the cljs compiler is
-invoked, producing a single JavaScript file: `main.js`. External libraries
-can be prepended to `main.js` at this point. The product of the hlisp compiler
-is the output HTML files and `main.js`.
+invoked, producing a single JavaScript file: main.js. External libraries
+can be prepended to main.js at this point. The product of the hlisp compiler
+is the output HTML files and main.js.
 
 ## Related Projects
 
