@@ -183,6 +183,14 @@ What are the important issues that must be solved?
   However, projects built on top of the core could use other more user-friendly
   libraries.
 
+* **HTML templating tools.**
+
+  How will templating and HTML processing work in Lisp?
+
+  **Solution:** None, yet. However, access to macros in cljs suggests that
+  tools could be developed that far exceed the capabilities of current
+  templating systems without giving up the unified evaluation environment.
+
 ## Demo
 
 Here is the example `index.html` file:
