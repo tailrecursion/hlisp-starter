@@ -95,7 +95,18 @@ frontend (user interface) web development.
 
   These domains do not have a common set of primitives, means of abstraction,
   or means of composition. This results in having no coherent _meaning_ for
-  entities in these systems.
+  entities in these systems: entities do not have a single identity or way to
+  manage references to them, they can't be composed with each other in a
+  uniform way.
+
+  The primary technique for managing complexity is the use of modular code and
+  the separation of concerns. The tight coupling of disparate domains torpedoes
+  this approach. Concerns which may be orthogonal in one domain may not be
+  orthogonal in one of the other domains. The ability to create more specific
+  abstractions by composition of more general ones is greatly restricted.
+
+  * **Goal:** Single, unified set of primitives, means of abstraction, and
+    means of composition.
   
 * **Pervasive use of global references and shared, mutable state.** The lack
   of a common set of primitives or means of abstraction/composition dictates
