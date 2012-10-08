@@ -212,6 +212,21 @@ What are the important issues that must be solved?
   tools could be developed that far exceed the capabilities of current
   templating systems without giving up the unified evaluation environment.
 
+* **Application data, server-client interaction.**
+
+  How does the front end get the data it needs from the server?
+
+  **Solution:** Data moves to and from the server via an RPC mechanism. This
+  must include content-negotiation, authentication, authorization, anti-CSRF
+  protection, and exception handling that may span the server and client. This
+  RPC layer is a natural point of demarcation between interface and business
+  logic. User interface issues notwithstanding, a robust business API is vital
+  to the success of any complex project. By leveraging this API layer via the
+  RPC system, a nice, uniform structure is maintained&mdash;the user interface
+  is merely another client.
+
+## Architecture
+
 ## Related Projects
 
 * [lein-hlisp](https://github.com/micha/lein-hlisp) The HLisp compiler.
