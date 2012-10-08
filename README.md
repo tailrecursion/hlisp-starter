@@ -223,7 +223,8 @@ What are the important issues that must be solved?
   logic. User interface issues notwithstanding, a robust business API is vital
   to the success of any complex project. By leveraging this API layer via the
   RPC system, a nice, uniform structure is maintained&mdash;the user interface
-  is merely another client.
+  is merely another client. Tools such as [wigwam](https://github.com/micha/wigwam)
+  already exist and can be used.
 
 ## Architecture
 
