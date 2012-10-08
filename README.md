@@ -226,8 +226,6 @@ What are the important issues that must be solved?
   is merely another client. Tools such as [wigwam](https://github.com/micha/wigwam)
   already exist and can be used.
 
-## Architecture
-
 ## Related Projects
 
 * [lein-hlisp](https://github.com/micha/lein-hlisp) The HLisp compiler.
