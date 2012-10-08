@@ -82,7 +82,7 @@ Here is the example `index.html` file (or look at the [demo](http://micha.github
 </html>
 ```
 
-# Concept
+## Concept
 
 This project aims to address some of the causes of incidental complexity in
 frontend (user interface) web development.
