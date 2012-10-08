@@ -175,6 +175,13 @@ What are the important issues that must be solved?
   `<script type="text/hlisp">` element. Lisp source can be contained in this
   script element, to be evaluated in the environment of the page.
 
+* **Code libraries and namespaces.**
+
+  How will library code be managed?
+
+  **Solution:** ClojureScript has excellent support for libraries, namespaces,
+  import and export of references, etc.
+
 * **Event handlers and dynamic interface.**
 
   How will the goals of first-class event streams and composable callbacks be
