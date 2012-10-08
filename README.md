@@ -101,6 +101,9 @@ language, for the following reasons:
 
 ## A Possible Solution
 
+Is Lisp an acceptable environment for the full user interface stack? Does Lisp
+provide a solution to the above problems?
+
 * **The HTML document can be evaluated as a Lisp program.**
 
   Given that HTML and Lisp are semantically compatible, it's possible to
@@ -124,6 +127,11 @@ language, for the following reasons:
   scope, namespaced references, and all the other Lisp mechanisms for managing
   references is available in both the library code and the markup itself. The
   markup elements become first-class entities.
+
+## Architecture
+  
+* **Interpreted vs. compiled Lisp.**
+
   
 
 ## Demo
