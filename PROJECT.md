@@ -216,7 +216,9 @@ What are the important issues that must be solved?
   HTML has only one primitive type: the list. However, numbers, strings, etc.
   can perhaps be read as special lists. For example, the number 42 could be
   expressed as `<val_number>42</val_number>` and the string "hello" as
-  `<val_string>hello</val_string>`.
+  `<val_string>hello</val_string>`. This is cumbersome, but it's offset by the
+  fact that this type of coding can be done in a library or in the lisp
+  `<script>` tag in the document `<head>`.
 
 * **Code libraries and namespaces.**
 
