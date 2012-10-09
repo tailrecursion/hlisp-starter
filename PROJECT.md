@@ -258,7 +258,7 @@ What are the important issues that must be solved?
 An hlisp project consists of the following components:
 
 * **The hlisp compiler.** Implemented as a [leiningen](https://github.com/technomancy/leiningen)
-  plugin. **[The hlisp compiler].(https://github.com/micha/lein-hlisp/)**.
+  plugin. **[The hlisp compiler](https://github.com/micha/lein-hlisp/).**
 
 * **The hlisp library.** A cljs library provides the [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
   namespace, containing the implementation for the ElemNode and TextNode
