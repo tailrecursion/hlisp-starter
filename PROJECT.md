@@ -308,20 +308,20 @@ invoked, producing a single JavaScript file, _main.js_.
 
 #### Related projects:
 
-* [Cappuccino](http://cappuccino.org/) Unifies evaluation
+* [Cappuccino](http://cappuccino.org/) unifies evaluation
   environment by eliminating page HTML markup. Compiles
   [Objective-J](http://en.wikipedia.org/wiki/Objective-J) into HTML and
   JavaScript.
 
 * [Hop](http://hop.inria.fr/usr/local/lib/hop/2.3.1/weblets/home/articles/hop-lang/article.html)
-  Eliminates page HTML in favor of Lisp. Encompasses back-end web services as
+  eliminates page HTML in favor of Lisp. Encompasses back-end web services as
   well as front-end UI. Generates HTML, JavaScript, SQL, etc. for each tier,
   from Lisp source code.
 
 #### Previous work:
 
-* [lein-hlisp](https://github.com/micha/lein-hlisp) The HLisp compiler.
-* [Hlisp](https://github.com/micha/hlisp) Previous attempt at interpreted Lisp.
-* [Declarify.js](https://github.com/micha/declarify.js) Exploration of FRP in the browser.
-* [Golf](https://github.com/golf/golf) Initial attempts.
+* [Lein-hlisp](https://github.com/micha/lein-hlisp) the hlisp compiler.
+* [Hlisp](https://github.com/micha/hlisp) previous attempt at interpreted Lisp.
+* [Declarify.js](https://github.com/micha/declarify.js) exploration of FRP in the browser.
+* [Golf](https://github.com/golf/golf) initial attempts.
 
