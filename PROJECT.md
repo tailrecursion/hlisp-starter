@@ -258,7 +258,7 @@ What are the important issues that must be solved?
 An hlisp project consists of the following components:
 
 * **The hlisp compiler.** Implemented as a [leiningen](https://github.com/technomancy/leiningen)
-  plugin.
+  plugin. [Lein-hlisp source code](https://github.com/micha/lein-hlisp/).
 
 * **The hlisp library.** A cljs library provides the [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
   namespace, containing the implementation for the ElemNode and TextNode
@@ -319,7 +319,6 @@ invoked, producing a single JavaScript file, _main.js_.
 
 ## Previous work:
 
-* [Lein-hlisp](https://github.com/micha/lein-hlisp) the hlisp compiler.
 * [Hlisp](https://github.com/micha/hlisp) previous attempt at interpreted Lisp.
 * [Declarify.js](https://github.com/micha/declarify.js) exploration of FRP in the browser.
 * [Golf](https://github.com/golf/golf) initial attempts.
