@@ -302,7 +302,23 @@ does the following:
 Then, when all HTML source files have been processed, the cljs compiler is
 invoked, producing a single JavaScript file, _main.js_.
 
-## Related Projects
+## References
+
+1. [Flapjax: A Programming Language for Ajax Applications](http://www.cs.brown.edu/~sk/Publications/Papers/Published/mgbcgbk-flapjax/paper.pdf)
+
+#### Related projects:
+
+* [Cappuccino](http://cappuccino.org/)
+
+  Unifies evaluation environment by eliminating page HTML markup. Compiles
+  [Objective-J](http://en.wikipedia.org/wiki/Objective-J) into HTML and
+  JavaScript.
+
+* [Hop](http://hop.inria.fr/usr/local/lib/hop/2.3.1/weblets/home/articles/hop-lang/article.html)
+
+  Eliminates page HTML in favor of Lisp. Encompasses back-end web services as
+  well as front-end UI. Generates HTML, JavaScript, SQL, etc. for each tier,
+  from Lisp source code.
 
 #### Previous work:
 
