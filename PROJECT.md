@@ -314,7 +314,7 @@ invoked, producing a single JavaScript file, _main.js_.
   JavaScript.
 * [Hop](http://hop.inria.fr/usr/local/lib/hop/2.3.1/weblets/home/articles/hop-lang/article.html)
   eliminates page HTML in favor of Lisp. Encompasses back-end web services as
-  well as front-end UI. Generates HTML, JavaScript, SQL, etc. for each tier,
+  well as front-end UI. Generates HTML, JavaScript, SQL, etc. for each tier
   from Lisp source code.
 
 #### Previous work:
