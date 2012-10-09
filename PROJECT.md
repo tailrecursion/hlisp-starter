@@ -211,6 +211,13 @@ What are the important issues that must be solved?
   it's possible to simply refrain from naming user-level functions and entities
   with names that are not compatible with both.
 
+* **Restricted set of primitives in HTML.**
+
+  HTML has only one primitive type: the list. However, numbers, strings, etc.
+  can perhaps be read as special lists. For example, the number 42 could be
+  expressed as `<val_number>42</val_number>` and the string "hello" as
+  `<val_string>hello</val_string>`.
+
 * **Code libraries and namespaces.**
 
   How will library code be managed?
