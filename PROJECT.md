@@ -260,10 +260,10 @@ An hlisp project consists of the following components:
 * **[The hlisp compiler](https://github.com/micha/lein-hlisp/).** Implemented
   as a [leiningen](https://github.com/technomancy/leiningen) plugin.
 
-* **The hlisp library.** A cljs library provides the [hlisp.env](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)
-  namespace, containing the implementation for the ElemNode and TextNode
-  deftypes. All of the HTML elements, p, div, span, etc., are defined in
-  the page namespace.
+* **[The hlisp runtime environment.](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)**
+  Provides the `hlisp.env` namespace containing the implementation for the
+  ElemNode and TextNode deftypes. All of the HTML elements, p, div, span,
+  etc., are defined in the page namespace.
 
 * **ClojureScript libraries.** Existing libraries can be used without
   modification in most cases. The only issue is names that are not valid HTML
