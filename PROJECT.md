@@ -306,7 +306,7 @@ invoked, producing a single JavaScript file, _main.js_.
 
 1. [Flapjax: A Programming Language for Ajax Applications](http://www.cs.brown.edu/~sk/Publications/Papers/Published/mgbcgbk-flapjax/paper.pdf)
 
-#### Related projects:
+## Related projects:
 
 * [Cappuccino](http://cappuccino.org/) unifies evaluation
   environment by eliminating page HTML markup. Compiles
@@ -317,7 +317,7 @@ invoked, producing a single JavaScript file, _main.js_.
   well as front-end UI. Generates HTML, JavaScript, SQL, etc. for each tier
   from Lisp source code.
 
-#### Previous work:
+## Previous work:
 
 * [Lein-hlisp](https://github.com/micha/lein-hlisp) the hlisp compiler.
 * [Hlisp](https://github.com/micha/hlisp) previous attempt at interpreted Lisp.
