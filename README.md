@@ -1,8 +1,7 @@
 # HLisp Starter
 
 HLisp is a lisp implementation built atop
-[ClojureScript](https://github.com/clojure/clojurescript/wiki) that attempts to
-mitigate several significant problems with interactive web development.
+[ClojureScript](https://github.com/clojure/clojurescript/wiki).
 
 **You may want to:**
 
