@@ -116,7 +116,7 @@ and sends them to the browser to be evaluated.
 
 ### Emacs
 
-* `C-x d` to the `cljs-starter` directory
+* `C-x d` to the `hlisp-starter` directory
 * `M-x set-variable`, and set the variable `inferior-lisp-program` to
   `script/cljsrepl`
 * `M-x run-lisp` and you should see an inferior-lisp buffer running a
