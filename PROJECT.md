@@ -304,6 +304,8 @@ invoked, producing a single JavaScript file, _main.js_.
 
 ## Related Projects
 
+#### Previous work:
+
 * [lein-hlisp](https://github.com/micha/lein-hlisp) The HLisp compiler.
 * [Hlisp](https://github.com/micha/hlisp) Previous attempt at interpreted Lisp.
 * [Declarify.js](https://github.com/micha/declarify.js) Exploration of FRP in the browser.
