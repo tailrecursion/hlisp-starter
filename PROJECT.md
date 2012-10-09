@@ -261,7 +261,7 @@ An hlisp project consists of the following components:
   as a [leiningen](https://github.com/technomancy/leiningen) plugin.
 
 * **[The hlisp library.](https://github.com/micha/lein-hlisp/blob/master/resources/env.cljs)**
-  Provides the `hlisp.env` namespace containing the implementation for the
+  Provides the hlisp.env namespace containing the implementation for the
   ElemNode and TextNode deftypes. All of the HTML elements, p, div, span,
   etc., are defined in the page namespace.
 
