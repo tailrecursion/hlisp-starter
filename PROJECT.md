@@ -295,7 +295,7 @@ The hlisp compiler scans for HTML source files. For each source file found it
 does the following:
 
 1. Extract the `<script type="text/hlisp">` tag from the document `<head>`.
-2. Use the cljs reader to read the text contents as cljs forms.
+2. Use the Clojure reader to read the text contents as lisp forms.
 3. Extract the namespace declaration (must be the first form).
 4. Insert a cljs "prelude" in between the namespace declaration and the rest of
    the forms from step 2. This prelude has definitions for things that need to
@@ -332,5 +332,5 @@ invoked, producing a single JavaScript file, _main.js_.
 
 * [Hlisp](https://github.com/micha/hlisp) previous attempt at interpreted Lisp.
 * [Declarify.js](https://github.com/micha/declarify.js) exploration of FRP in the browser.
-* [Golf](https://github.com/golf/golf) initial attempts.
+* [Golf](http://golf.github.com) initial attempts.
 
