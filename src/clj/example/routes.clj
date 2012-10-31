@@ -11,7 +11,9 @@
   (fn [req]
     (handler
      (update-in req [:uri]
-                #(if (= "/" %) "/index.html" %)))))
+                #(if-let [dir (re-matches #"^.*/" %)]
+                   (str dir "index.html")
+                   %)))))
 
 (def app
   (-> (handler/site main-routes)
