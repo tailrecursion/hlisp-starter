@@ -1,81 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>hlisp test</title>
+  <head>
+    <meta charset="utf-8">
 
-  <script type="text/hlisp">
-
-    ;; Namespace declaration. Each page must have a unique namespace.
-    ;; The ns macro is also pulling in functions defined in other name-
-    ;; spaces, like the make-radio and make-tabs functions defined in
-    ;; the mytest.ui namespace (src/cljs/mytest/ui.cljs).
-
-    (ns holyshit
-      (:use
-        [flapjax.core :only [sync-e]]
-        [mytest.ui    :only [make-radio make-tabs]])
-      (:use-macros
-        [hlisp.macros :only [def-values]]))
-
-    ;; Create a "tabs" set with two trigger elements and two container
-    ;; elements. When the trigger element is clicked the associated
-    ;; container element is shown and all other containers are hidden.
-
-    (def-values
-      [mytabs question-tab question answer-tab answer]
-      (make-tabs "one" li div "one" li div "two"))
-
-    ;; Define a var to save a little typing.
-
-    (def a-void (a {:href "javascript:void (0)"}))
-
-    ;; Create a "radio button" set with two elements (anchors, in this
-    ;; case). The myradio event stream carries values of "one" and "two"
-    ;; when the first or second element is clicked on, respectively.
-
-    (def-values
-      [myradio show-question show-answer]
-      (make-radio "one" a-void "one" a-void "two"))
-
-    ;; Keep myradio and mytabs synced: when one changes state the other
-    ;; does, too.
-
-    (sync-e myradio mytabs)
-
-  </script>
-
-  <style type="text/css">
+    <title>hlisp test</title>
+<style type="text/css">
     ul.control-tabs { padding: 0; list-style-type: none; }
     ul.control-tabs li { display: inline; padding-right: 5px; }
     ul.control-tabs li.checked { color: red; }
   </style>
-</head>
-<body>
+  </head>
 
-  <ul class="control-tabs">
-    <question-tab>question</question-tab>
-    <answer-tab>answer</answer-tab>
-  </ul>
-
-  <!--This here is a comment.-->
-
-  <div>
-    <question>
-      <p>
-        <b>Q.</b> Why did the chicken cross the road? <show-answer>A</show-answer>
-      </p>
-    </question>
-    <answer>
-      <p>
-        <b>A.</b> To get to the other side! <show-question>Q</show-question>
-      </p>
-    </answer>
-  </div>
-
-  <script type="text/javascript">var CLOSURE_NO_DEPS = true</script>
-  <script src="/main.js" type="text/javascript"></script>
-  <script type="text/javascript">holyshit.hlispinit()</script>
-
-</body>
+  <body>
+<script type="text/javascript">
+var CLOSURE_NO_DEPS = true
+</script>
+<script src="/main.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+holyshit.hlispinit()
+</script>
+  </body>
 </html>
