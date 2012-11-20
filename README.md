@@ -17,6 +17,14 @@ Here is the example `index.html` file:
   <meta charset="utf-8" />
   <title>hlisp test</title>
 
+  <style type="text/css">
+    ul.control-tabs { padding: 0; list-style-type: none; }
+    ul.control-tabs li { display: inline; padding-right: 5px; }
+    ul.control-tabs li.checked { color: red; }
+  </style>
+</head>
+<body>
+
   <script type="text/hlisp">
 
     ;; Namespace declaration. Each page must have a unique namespace.
@@ -58,33 +66,25 @@ Here is the example `index.html` file:
 
   </script>
 
-  <style type="text/css">
-    ul.control-tabs { padding: 0; list-style-type: none; }
-    ul.control-tabs li { display: inline; padding-right: 5px; }
-    ul.control-tabs li.checked { color: red; }
-  </style>
-</head>
-<body>
-
-  <ul class="control-tabs">
-    <questiontab>question</questiontab>
-    <answertab>answer</answertab>
-  </ul>
-
   <div>
-    <question>
-      <p>
-        <b>Q.</b> Why did the chicken cross the road? <showanswer>A</showanswer>
-      </p>
-    </question>
-    <answer>
-      <p>
-        <b>A.</b> To get to the other side! <showquestion>Q</showquestion>
-      </p>
-    </answer>
-  </div>
+    <ul class="control-tabs">
+      <questiontab>question</questiontab>
+      <answertab>answer</answertab>
+    </ul>
 
-  <!--__HLISP__-->
+    <div>
+      <question>
+        <p>
+          <b>Q.</b> Why did the chicken cross the road? <showanswer>A</showanswer>
+        </p>
+      </question>
+      <answer>
+        <p>
+          <b>A.</b> To get to the other side! <showquestion>Q</showquestion>
+        </p>
+      </answer>
+    </div>
+  </div>
 
 </body>
 </html>
