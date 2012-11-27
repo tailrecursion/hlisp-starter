@@ -4,6 +4,8 @@
     [flapjax.dom  :as dom]
     [jayq.core    :as jq]))
 
+(declare distinctE)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;  UTILITY FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn isE?
@@ -18,15 +20,23 @@
   ([streamE]
    (E->B streamE nil))
   ([streamE v] 
-   (F/startsWith streamE v)))
+   (F/startsWith (distinctE streamE) v)))
 
 (defn B->E
   [valueB]
-  (F/changes valueB))
+  (distinctE (F/changes valueB)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;  EVENT STREAM FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def sendE F/sendEvent)
+
+(defn distinctE
+  [streamE]
+  (F/mapE
+    first
+    (F/filterE
+      (F/collectE streamE [::nil ::nil] #(vector %1 (if (= %1 (first %2)) ::nil %1)))
+      #(not= ::nil (second %)))))
 
 (defn initE
   ([v]

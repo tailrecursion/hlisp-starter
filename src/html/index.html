@@ -9,12 +9,12 @@
     ul.control-tabs li { display: inline; padding-right: 5px; }
     ul.control-tabs li.checked { color: red; }
 
-    .test li { color: darkblue; }
-    .test li.active,
-    .test li.active.hover { color: red; }
-    .test li.hover { color: blue; text-decoration: underline; }
-    .test li.selected { color: green; }
-    .test li.disabled { text-decoration: line-through; }
+    .test span { cursor: pointer; color: darkblue; }
+    .test span.active,
+    .test span.active.hover { color: red; }
+    .test span.hover { color: blue; text-decoration: underline; }
+    .test span.selected { color: green; }
+    .test span.disabled { text-decoration: line-through; }
 
     div.checked { color: green; }
   </style>
@@ -25,29 +25,30 @@
 
     (ns holyshit
       (:use
-        [flapjax.hlisp :only [initE]])
+        [flapjax.core :only [mapE]]
+        [flapjax.hlisp :only [initE B->E]])
       (:require
         [ui.core :as ui])
       (:use-macros
         [hlisp.macros :only [def-values]]))
 
     (def s1
-      (ui/make-select li "one" li "two" li "three"))
+      (ui/make-select span "one" span "two" span "three"))
 
     (def s2
-      (ui/make-select li "two" li "one" li "three"))
+      (ui/make-select span "one" span "two" span "three"))
 
     (def l1
       (apply ui/link-unique-selects
         (mapv ui/make-restricted-select [s1 s2])))
 
-    (def-values
-      [s1r1 s1r2 s1r3]
-      (:options s1))
+    (def-values [s1r1 s1r2 s1r3] (:options s1))
 
-    (def-values
-      [s2r2 s2r1 s2r3]
-      (:options s2))
+    (def-values [s2r1 s2r2 s2r3] (:options s2))
+
+    (initE (:linkedE l1) ["one" "two"])
+
+    (mapE #(js/console.log (str %)) (B->E (:linkedB l1)))
 
   </script>
 
@@ -58,17 +59,29 @@
     <hr>
 
     <ul class="test">
-      <s1r1>doit 1</s1r1>
-      <s1r2>doit 2</s1r2>
-      <s1r3>doit 3</s1r3>
+      <li>
+        <s1r1>doit 1</s1r1>
+      </li>
+      <li>
+        <s1r2>doit 2</s1r2>
+      </li>
+      <li>
+        <s1r3>doit 3</s1r3>
+      </li>
     </ul>
 
     <hr>
 
     <ul class="test">
-      <s2r1>doit 1</s2r1>
-      <s2r2>doit 2</s2r2>
-      <s2r3>doit 3</s2r3>
+      <li>
+        <s2r1>doit 1</s2r1>
+      </li>
+      <li>
+        <s2r2>doit 2</s2r2>
+      </li>
+      <li>
+        <s2r3>doit 3</s2r3>
+      </li>
     </ul>
 
     <hr>
