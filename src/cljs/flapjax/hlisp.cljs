@@ -4,7 +4,7 @@
     [flapjax.dom  :as dom]
     [jayq.core    :as jq]))
 
-(declare distinctE)
+(declare filterRepeatsE)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;  UTILITY FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -20,17 +20,24 @@
   ([streamE]
    (E->B streamE nil))
   ([streamE v] 
-   (F/startsWith (distinctE streamE) v)))
+   (F/startsWith (filterRepeatsE streamE) v)))
 
 (defn B->E
   [valueB]
-  (distinctE (F/changes valueB)))
+  (filterRepeatsE (F/changes valueB)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;  EVENT STREAM FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def sendE F/sendEvent)
 
 (defn distinctE
+  [streamE]
+  (-> streamE
+    (F/collectE [::nil #{}] #(if (contains? %2 %1) [::nil %2] [%1 (conj %2 %1)]))
+    (F/filterE (comp (partial not= ::nil) first))
+    (F/mapE first)))
+
+(defn filterRepeatsE
   [streamE]
   (F/mapE
     first
