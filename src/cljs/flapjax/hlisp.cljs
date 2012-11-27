@@ -38,6 +38,12 @@
       (F/collectE streamE [::nil ::nil] #(vector %1 (if (= %1 (first %2)) ::nil %1)))
       #(not= ::nil (second %)))))
 
+(defn skipE
+  [streamE n]
+  (if (= n 1)
+    (F/skipFirstE streamE)
+    (skipE (F/skipFirstE streamE) (dec n))))
+
 (defn initE
   ([v]
    (initE (F/receiverE) v))

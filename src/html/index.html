@@ -20,7 +20,7 @@
     (ns holyshit
       (:use
         [ui.core :only [make-linked-selects]]
-        [flapjax.core :only [mapE]]
+        [flapjax.core :only [mapE skipFirstE]]
         [flapjax.hlisp :only [initE B->E]])
       (:use-macros
         [hlisp.macros :only [def-values]]))
@@ -31,7 +31,7 @@
 
     (initE (:linkedE l1) ["one" "two"])
 
-    (mapE #(js/console.log (str %)) (B->E (:linkedB l1)))
+    (mapE #(js/console.log (str %)) (skipFirstE (B->E (:linkedB l1))))
 
   </script>
 
@@ -42,29 +42,17 @@
     <hr>
 
     <ul>
-      <li>
-        <s1r1>doit 1</s1r1>
-      </li>
-      <li>
-        <s1r2>doit 2</s1r2>
-      </li>
-      <li>
-        <s1r3>doit 3</s1r3>
-      </li>
+      <li> <s1r1>doit 1</s1r1> </li>
+      <li> <s1r2>doit 2</s1r2> </li>
+      <li> <s1r3>doit 3</s1r3> </li>
     </ul>
 
     <hr>
 
     <ul>
-      <li>
-        <s2r1>doit 1</s2r1>
-      </li>
-      <li>
-        <s2r2>doit 2</s2r2>
-      </li>
-      <li>
-        <s2r3>doit 3</s2r3>
-      </li>
+      <li> <s2r1>doit 1</s2r1> </li>
+      <li> <s2r2>doit 2</s2r2> </li>
+      <li> <s2r3>doit 3</s2r3> </li>
     </ul>
 
     <hr>
