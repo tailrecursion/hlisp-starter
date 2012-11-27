@@ -46,8 +46,7 @@
                  :cljs-src    "src/cljs"
                  :html-out    "resources/public"
                  :base-dir    ""
-                 :includes    ["src/jslib/jquery.js"
-                               "src/jslib/flapjax.js"]
+                 :includes    ["src/jslib/jquery.js"]
                  :cljsc-opts  {:optimizations  :whitespace
-                               :externs        ["src/extern/jquery.js"
-                                                "src/extern/flapjax.js"]}})
+                               :libs           ["src/jslib/flapjax.js"]
+                               :externs        ["src/extern/jquery.js"]}})

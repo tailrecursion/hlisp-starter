@@ -1,106 +1,122 @@
 (ns flapjax.core
-  (:use
-    [hlisp.env :only [clone]])
-  (:require [jayq.core :as jq]
-            [jayq.util :as ju]))
+  (:require F))
 
-(defn core-event [ev]
-  (let [r (js/receiverE)]
-    (-> (jq/$ "body")
-      (.on ev (fn [v] (.sendEvent r v))))
-    r))
+(declare receiverE sendE)
 
-(def *clicks*   (core-event "click"))
-(def *changes*  (core-event "change"))
+(def EventStream  F/EventStream)
+(def Behavior     F/Behavior)
 
-(def add-initfn! jq/$)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;  UTILITY FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defn id [elem]
-  (peek (.-ids elem)))
+(defn startsWith
+  [streamE v]
+  (.startsWith streamE v))
 
-(defn id! [elem]
-  (if-not (seq (.-ids elem)) (clone elem) elem))
+(defn changes
+  [sourceB]
+  (.changes sourceB))
 
-(defn filter-id [id]
-  (fn [v]
-    (< 0 (-> (jq/$ (.-target v))
-           (.parentsUntil "body")
-           (.andSelf)
-           (.filter (str "[data-hl~='" id "']"))
-           (.size)))))
+;;;;;;;;;;;;;;;;;;;;;;;;;  EVENT STREAM FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defn find-id [id]
-  (jq/$ (str "[data-hl~='" id "']")))
+(def oneE   F/oneE)
+(def zeroE  F/zeroE)
+(def mapE   F/mapE)
+(def mergeE F/mergeE)
 
-(defn is-jq? [obj]
-  (string? (.-jquery obj)))
+(defn switchE
+  [streamE]
+  (.switchE streamE))
 
-(defn dom-get [elem]
-  (find-id (id elem)))
+(defn filterE
+  [streamE pred]
+  (.filterE streamE pred))
 
-(defn dom-attr!
-  ([elem k]
-   (jq/attr (dom-get elem) k))
-  ([elem k v & kvs]
-   (let [e (jq/attr (dom-get elem) k v)] 
-     (when (seq kvs)
-       (mapv (fn [[k v]] (jq/attr e k v)) (partition 2 kvs)))
-     elem)))
+(defn constantE
+  [streamE v]
+  (.constantE streamE v))
 
-(defn dom-remove-attr! [elem k & ks]
-  (let [e (.removeAttr (dom-get elem) k)]
-    (when (seq ks)
-      (mapv #(.removeAttr e %) ks))
-    elem))
+(defn collectE
+  [streamE init f]
+  (.collectE streamE init f))
 
-(defn dom-add-class! [elem c & cs]
-  (let [e (.addClass (dom-get elem) c)]
-    (when (seq cs)
-      (mapv #(.addClass e %) cs))
-    elem))
+(defn notE
+  [streamE]
+  (.notE streamE))
 
-(defn dom-remove-class! [elem c & cs]
-  (let [e (.removeClass (dom-get elem) c)]
-    (when (seq cs)
-      (mapv #(.removeClass e %) cs))
-    elem))
+(defn filterRepeatsE
+  [streamE]
+  (.filterRepeatsE streamE))
 
-(defn dom-css!
-  ([elem k v]
-   (.css (dom-get elem) k v)
-   elem)
-  ([elem o]
-   (let [ret (.css (dom-get elem) o)]
-     (if (is-jq? ret) elem ret))))
+(def receiverE F/receiverE)
+(def sendEvent F/sendEvent)
 
-(defn dom-toggle! [elem v]
-  (.toggle (dom-get elem) v))
+(defn sendE
+  [streamE v]
+  (.sendEvent streamE v))
 
-(defn init-e [rcv v]
-  (add-initfn! #(.sendEvent rcv v))
-  rcv)
+(defn snapshotE
+  [streamE]
+  (.snapshotE streamE))
 
-(defn receiver-e [& init]
-  (reduce init-e (js/receiverE) init))
+(defn onceE
+  [streamE]
+  (.onceE streamE))
 
-(defn send-e [rcv v]
-  (.sendEvent rcv v))
+(defn skipFirstE
+  [streamE]
+  (.skipFirstE streamE))
 
-(defn sync-e [s1 s2]
-  (let [e1 (js/filterRepeatsE s1)
-        e2 (js/filterRepeatsE s2)]
-    (js/mapE #(.sendEvent s2 %) e1)
-    (js/mapE #(.sendEvent s1 %) e2)))
+(defn delayE
+  [streamE intervalB]
+  (.delayE streamE intervalB))
 
-(defn filter-e [pred src]
-  (js/filterE src pred))
+(defn blindE
+  [streamE intervalB]
+  (.blindE streamE intervalB))
 
-(defn clicks-e [elem]
-  (js/filterE *clicks* (filter-id (id elem))))
+(defn calmE
+  [streamE intervalB]
+  (.calmE streamE intervalB))
 
-(defn changes-e [elem]
-  (js/filterE *changes* (filter-id (id elem))))
+(def timerE F/timerE)
 
-(defn map-e [f a]
-  (js/mapE f a))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;  BEHAVIOR FUNCTIONS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def constantB F/constantB)
+
+(defn delayB
+  [sourceB intervalB]
+  (.delayB sourceB intervalB))
+
+(defn valueNow
+  [sourceB]
+  (.valueNow sourceB))
+
+(defn switchB
+  [sourceBB]
+  (.switchB sourceBB))
+
+(def andB F.Behavior/andB)
+(def orB  F.Behavior/orB)
+
+(defn notB
+  [valueB]
+  (.notB valueB))
+
+(def liftB F/liftB)
+(def condB F/condB)
+
+(defn ifB
+  [predicateB consequentB alternativeB]
+  (.ifB predicateB consequentB alternativeB))
+
+(def timerB F/timerB)
+
+(defn blindB
+  [sourceB intervalB]
+  (.blindB sourceB intervalB))
+
+(defn calmB
+  [sourceB intervalB]
+  (.calmB sourceB intervalB))
 
