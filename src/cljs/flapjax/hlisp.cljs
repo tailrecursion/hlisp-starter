@@ -30,19 +30,23 @@
 
 (def sendE F/sendEvent)
 
+(comment
 (defn distinctE
   [streamE]
   (-> streamE
     (F/collectE [::nil #{}] #(if (contains? %2 %1) [::nil %2] [%1 (conj %2 %1)]))
     (F/filterE (comp (partial not= ::nil) first))
     (F/mapE first)))
+  
+  ) 
 
 (defn filterRepeatsE
   [streamE]
-  (-> streamE
-    (F/collectE [::nil ::nil] #(vector %1 (if (= %1 (first %2)) ::nil %1)))
-    (F/filterE #(not= ::nil (second %)))
-    (F/mapE first)))
+  (F/mapE
+    first
+    (F/filterE
+      (F/collectE streamE [::nil ::nil] #(vector %1 (if (= %1 (first %2)) ::nil %1)))
+      #(not= ::nil (second %)))))
 
 (defn skipE
   [streamE n]
