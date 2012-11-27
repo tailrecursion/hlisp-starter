@@ -44,9 +44,8 @@
 (defn make-select
   [& optvals]
   (let [[options values] (apply map vector (partition 2 optvals)) 
-        default   (first values)
         selectE   (receiverE)
-        selectedB (E->B selectE default)]
+        selectedB (E->B selectE ::nil)]
     (letfn [(wireup [e v]
               (let [e (id! e)]
                 (mapE #(sendE selectE v) (onClickE e)) 
@@ -54,7 +53,7 @@
                   (make-clickable (onActiveE e))
                   (make-hoverable (onHoverE e))
                   (make-selectable (mapE #(= v %) selectE)))))]
-      {:selectE   (initE selectE default)
+      {:selectE   selectE
        :selectedB selectedB
        :options   (mapv wireup options values)
        :values    values})))
