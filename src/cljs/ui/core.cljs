@@ -65,9 +65,7 @@
     (mapv (fn [e v] (make-disableable e (mapE #(contains? % v) restrictE)))
           (:options select)
           (:values select))
-    (-> select
-      (assoc :restrictE restrictE)
-      (assoc :restrictedB (E->B restrictE #{})))))
+    (assoc select :restrictE restrictE :restrictedB (E->B restrictE #{}))))
 
 (defn link-unique-selects
   [& selects]
@@ -83,3 +81,8 @@
     {:linkedE linkedE
      :linkedB linkedB
      :selects selects}))
+
+(defn make-linked-selects
+  [n & optvals]
+  (let [selects (mapv #(apply make-select optvals) (range 0 n))]
+    (apply link-unique-selects (mapv make-restricted-select selects))))

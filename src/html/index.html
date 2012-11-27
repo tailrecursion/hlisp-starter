@@ -5,18 +5,12 @@
   <title>hlisp test</title>
 
   <style type="text/css">
-    ul.control-tabs { padding: 0; list-style-type: none; }
-    ul.control-tabs li { display: inline; padding-right: 5px; }
-    ul.control-tabs li.checked { color: red; }
-
-    .test span { cursor: pointer; color: darkblue; }
-    .test span.active,
-    .test span.active.hover { color: red; }
-    .test span.hover { color: blue; text-decoration: underline; }
-    .test span.selected { color: green; }
-    .test span.disabled { text-decoration: line-through; }
-
-    div.checked { color: green; }
+    span { cursor: pointer; color: darkblue; }
+    span.active,
+    span.active.hover { color: red; }
+    span.hover { color: blue; text-decoration: underline; }
+    span.selected { color: green; }
+    span.disabled { text-decoration: line-through; }
   </style>
 </head>
 <body>
@@ -25,26 +19,15 @@
 
     (ns holyshit
       (:use
+        [ui.core :only [make-linked-selects]]
         [flapjax.core :only [mapE]]
         [flapjax.hlisp :only [initE B->E]])
-      (:require
-        [ui.core :as ui])
       (:use-macros
         [hlisp.macros :only [def-values]]))
 
-    (def s1
-      (ui/make-select span "one" span "two" span "three"))
-
-    (def s2
-      (ui/make-select span "one" span "two" span "three"))
-
-    (def l1
-      (apply ui/link-unique-selects
-        (mapv ui/make-restricted-select [s1 s2])))
-
-    (def-values [s1r1 s1r2 s1r3] (:options s1))
-
-    (def-values [s2r1 s2r2 s2r3] (:options s2))
+    (def l1 (make-linked-selects 2 span "one" span "two" span "three"))
+                                 
+    (def-values [[s1r1 s1r2 s1r3] [s2r1 s2r2 s2r3]] (mapv :options (:selects l1)))
 
     (initE (:linkedE l1) ["one" "two"])
 
@@ -58,7 +41,7 @@
 
     <hr>
 
-    <ul class="test">
+    <ul>
       <li>
         <s1r1>doit 1</s1r1>
       </li>
@@ -72,7 +55,7 @@
 
     <hr>
 
-    <ul class="test">
+    <ul>
       <li>
         <s2r1>doit 1</s2r1>
       </li>
