@@ -39,11 +39,10 @@
 
 (defn filterRepeatsE
   [streamE]
-  (F/mapE
-    first
-    (F/filterE
-      (F/collectE streamE [::nil ::nil] #(vector %1 (if (= %1 (first %2)) ::nil %1)))
-      #(not= ::nil (second %)))))
+  (-> streamE
+    (F/collectE [::nil ::nil] #(vector %1 (if (= %1 (first %2)) ::nil %1)))
+    (F/filterE #(not= ::nil (second %)))
+    (F/mapE first)))
 
 (defn skipE
   [streamE n]
