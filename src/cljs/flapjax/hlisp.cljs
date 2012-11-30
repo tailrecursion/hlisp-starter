@@ -135,6 +135,11 @@
         ups   (F/mergeE (onMouseOutE e) *mouseup*)]
     (caseE downs true ups false)))
 
+(defn domValueB
+  [elem & [init]]
+  (let [values-e (F/mapE #(dom/value! elem) (onChangeE elem))]
+    (apply E->B values-e init)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  SPIGOTS  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn dotoDom

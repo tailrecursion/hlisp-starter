@@ -32,6 +32,10 @@
 
 (def dom-get (comp find-id id))
 
+(defn value!
+  [elem]
+  (.val (dom-get elem)))
+
 (defn attr!
   ([elem k]
    (jq/attr (dom-get elem) k))
