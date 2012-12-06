@@ -23,7 +23,7 @@
   [v]
   (->
     (jq/$ (.-target v))
-    (.is "[disabled]")
+    (.is "[data-disabled]")
     not))
 
 (defn find-id
@@ -90,4 +90,4 @@
 
 (defn disabled?
   [elem]
-  (.is (dom-get elem) "[disabled]"))
+  (.is (dom-get elem) "[data-disabled]"))
