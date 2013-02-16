@@ -5,7 +5,7 @@ HLisp is a lisp implementation built atop
 
 **You may want to:**
 
-* Look at the [demo](http://micha.github.com/hlisp-starter/).
+* Look at the [demo](http://tailrecursion.github.com/hlisp-starter/).
 * See the [design document](https://github.com/tailrecursion/hlisp-starter/blob/master/PROJECT.md).
 
 Here is the example `index.html` file:
