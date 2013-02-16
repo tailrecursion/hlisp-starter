@@ -6,7 +6,7 @@ HLisp is a lisp implementation built atop
 **You may want to:**
 
 * Look at the [demo](http://micha.github.com/hlisp-starter/).
-* See the [design document](https://github.com/micha/hlisp-starter/blob/master/PROJECT.md).
+* See the [design document](https://github.com/tailrecursion/hlisp-starter/blob/master/PROJECT.md).
 
 Here is the example `index.html` file:
 
@@ -190,7 +190,7 @@ Have a look at the `project.clj` file:
 (defproject
   hlisp-starter "0.1.0-SNAPSHOT"
   :description  "Example hlisp project."
-  :url          "https://github.com/micha/hlisp-starter"
+  :url          "https://github.com/tailrecursion/hlisp-starter"
   :license      {:name "Eclipse Public License"
                  :url "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src/clj"]
